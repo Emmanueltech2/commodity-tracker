@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>MOH 515 (Post Outbreak)</h:title>
+    <model>
+      <instance>
+        <moh_515_post_outbreak id="moh_515_post_outbreak" prefix="J1!moh_515_post_outbreak!" delimiter="#" version="`1.0`">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <cha_name/>
+            <cha_area/>
+            <cha_facility/>
+            <cha_county/>
+            <chp_total/>
+            <chp_reported_total/>
+          </inputs>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </moh_515_post_outbreak>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/cha_name" type="db:person" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/cha_area" type="string" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/cha_facility" type="string" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/cha_county" type="string" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/chp_total" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/inputs/chp_reported_total" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/moh_515_post_outbreak/inputs">
+      <label>Form Summary</label>
+      <input ref="/moh_515_post_outbreak/inputs/cha_name">
+        <label>What is your name?</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/inputs/cha_area">
+        <label>What is your area?</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/inputs/cha_facility">
+        <label>What is your linked facility?</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/inputs/cha_county">
+        <label>What county do you belong to?</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/inputs/chp_total">
+        <label>How many CHPs are in your area?</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/inputs/chp_reported_total">
+        <label>How many CHPs submitted report?</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>
