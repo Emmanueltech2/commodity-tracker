@@ -27,6 +27,11 @@
             <num_confirmed_cases/>
             <num_deaths/>
           </cholera_cases>
+          <community_activities>
+            <total_dialogue_days/>
+            <total_action_days/>
+            <total_units_meetings_days/>
+          </community_activities>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -49,6 +54,9 @@
       <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred_reached" type="int" required="true()" relevant=" /moh_515_post_outbreak/cholera_cases/num_referred  &gt;0"/>
       <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_confirmed_cases" type="int" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_deaths" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_dialogue_days" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_action_days" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_units_meetings_days" type="int" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -108,6 +116,18 @@
       </input>
       <input ref="/moh_515_post_outbreak/cholera_cases/num_deaths">
         <label>Number Of Deaths Due To Cholera In The Month</label>
+      </input>
+    </group>
+    <group ref="/moh_515_post_outbreak/community_activities">
+      <label>Community Activities</label>
+      <input ref="/moh_515_post_outbreak/community_activities/total_dialogue_days">
+        <label>Total Number Of Dialogue Days Held</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/community_activities/total_action_days">
+        <label>Total Number Of Action Days Held</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/community_activities/total_units_meetings_days">
+        <label>Total Number Of Units Meetings Held</label>
       </input>
     </group>
   </h:body>
