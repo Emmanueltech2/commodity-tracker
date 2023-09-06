@@ -7,6 +7,8 @@
         <moh_515_post_outbreak id="moh_515_post_outbreak" prefix="J1!moh_515_post_outbreak!" delimiter="#" version="`1.0`">
           <hidden_inputs>
             <source/>
+            <source_id/>
+            <_id/>
           </hidden_inputs>
           <form_summary>
             <cha_facility/>
@@ -41,28 +43,35 @@
       <instance id="contact-summary"/>
       <bind nodeset="/moh_515_post_outbreak/hidden_inputs" relevant="./source='user'"/>
       <bind nodeset="/moh_515_post_outbreak/hidden_inputs/source" type="string"/>
+      <bind nodeset="/moh_515_post_outbreak/hidden_inputs/source_id" type="string"/>
+      <bind nodeset="/moh_515_post_outbreak/hidden_inputs/_id" type="db:person"/>
       <bind nodeset="/moh_515_post_outbreak/form_summary/cha_facility" type="string" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/form_summary/cha_county" type="string" required="true()"/>
-      <bind nodeset="/moh_515_post_outbreak/form_summary/chp_total" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/form_summary/chp_reported_total" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/household_indicators/total_households" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_visited" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_clean_water" type="int" required="true()"/>
-      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_latrines" type="int" required="true()"/>
-      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_screened" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred_reached" type="int" jr:constraintMsg="Value should be greater or equal to zero" relevant=" /moh_515_post_outbreak/cholera_cases/num_referred  &gt;0" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_confirmed_cases" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_deaths" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/community_activities/total_dialogue_days" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/community_activities/total_action_days" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
-      <bind nodeset="/moh_515_post_outbreak/community_activities/total_units_meetings_days" type="int" jr:constraintMsg="Value should be greater or equal to zero" required="true()" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/form_summary/chp_total" type="int" required="true()" jr:constraintMsg="Number should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/form_summary/chp_reported_total" type="int" required="true()" jr:constraintMsg="Number cannot exceed that of total CHPs" constraint=".&lt;= /moh_515_post_outbreak/form_summary/chp_total " relevant=" /moh_515_post_outbreak/form_summary/chp_total  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/household_indicators/total_households" type="int" required="true()" jr:constraintMsg="Number should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households" type="int" required="true()" jr:constraintMsg="Number should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_visited" type="int" required="true()" jr:constraintMsg="Number cannot exceed that of new households" constraint=".&lt;=  /moh_515_post_outbreak/household_indicators/new_households " relevant=" /moh_515_post_outbreak/household_indicators/new_households  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_clean_water" type="int" required="true()" jr:constraintMsg="Number cannot exceed that of total visited households" constraint=".&lt;=  /moh_515_post_outbreak/household_indicators/new_households_visited " relevant=" /moh_515_post_outbreak/household_indicators/new_households_visited  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_latrines" type="int" required="true()" jr:constraintMsg="Number cannot exceed that of total visited households" constraint=".&lt;=  /moh_515_post_outbreak/household_indicators/new_households_visited " relevant=" /moh_515_post_outbreak/household_indicators/new_households_visited  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_screened" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred_reached" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0" relevant=" /moh_515_post_outbreak/cholera_cases/num_referred  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_confirmed_cases" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_deaths" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_dialogue_days" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_action_days" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
+      <bind nodeset="/moh_515_post_outbreak/community_activities/total_units_meetings_days" type="int" required="true()" jr:constraintMsg="Value should be greater or equal to zero" constraint=".&gt;=0"/>
       <bind nodeset="/moh_515_post_outbreak/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body>
-    <group ref="/moh_515_post_outbreak/hidden_inputs"/>
+    <group ref="/moh_515_post_outbreak/hidden_inputs">
+      <label>CHA's Details</label>
+      <input ref="/moh_515_post_outbreak/hidden_inputs/_id">
+        <label>Contact</label>
+      </input>
+    </group>
     <group ref="/moh_515_post_outbreak/form_summary">
       <label>Form Summary</label>
       <input ref="/moh_515_post_outbreak/form_summary/cha_facility">
