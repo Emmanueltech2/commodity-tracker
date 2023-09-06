@@ -20,6 +20,13 @@
             <new_households_with_clean_water/>
             <new_households_with_latrines/>
           </household_indicators>
+          <cholera_cases>
+            <num_screened/>
+            <num_referred/>
+            <num_referred_reached/>
+            <num_confirmed_cases/>
+            <num_deaths/>
+          </cholera_cases>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -37,6 +44,11 @@
       <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_visited" type="int" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_clean_water" type="int" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/household_indicators/new_households_with_latrines" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_screened" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_referred_reached" type="int" required="true()" relevant=" /moh_515_post_outbreak/cholera_cases/num_referred  &gt;0"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_confirmed_cases" type="int" required="true()"/>
+      <bind nodeset="/moh_515_post_outbreak/cholera_cases/num_deaths" type="int" required="true()"/>
       <bind nodeset="/moh_515_post_outbreak/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -78,6 +90,24 @@
       </input>
       <input ref="/moh_515_post_outbreak/household_indicators/new_households_with_latrines">
         <label>Number Of New Households Visited This Month With Latrines/Toilets?</label>
+      </input>
+    </group>
+    <group ref="/moh_515_post_outbreak/cholera_cases">
+      <label>Cholera Cases</label>
+      <input ref="/moh_515_post_outbreak/cholera_cases/num_screened">
+        <label>Number Of Persons Screened For Cholera</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/cholera_cases/num_referred">
+        <label>Number Of Presumptive Cholera Persons Referred For Diagnosis</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/cholera_cases/num_referred_reached">
+        <label>Number Of Referred Persons Who Reached Health Facility</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/cholera_cases/num_confirmed_cases">
+        <label>Number Of Confirmed Cholera Cases At Health Facility</label>
+      </input>
+      <input ref="/moh_515_post_outbreak/cholera_cases/num_deaths">
+        <label>Number Of Deaths Due To Cholera In The Month</label>
       </input>
     </group>
   </h:body>
