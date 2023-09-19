@@ -61,7 +61,7 @@
       <bind nodeset="/assessment/patient_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/assessment/patient_name" type="string" calculate="../inputs/contact/name"/>
       <bind nodeset="/assessment/group_assessment/cough" type="select1" required="true()"/>
-      <bind nodeset="/assessment/group_assessment/cough_duration" type="select1" required="true()" relevant=" /assessment/group_assessment/cough  = 'yes'"/>
+      <bind nodeset="/assessment/group_assessment/cough_duration" type="select1" relevant=" /assessment/group_assessment/cough  = 'yes'" required="true()"/>
       <bind nodeset="/assessment/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
