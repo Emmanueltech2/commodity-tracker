@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>New Family</h:title>
+    <h:title>House Hold</h:title>
     <model odk:xforms-version="1.0.0">
       <instance>
-        <a54WWtSqvaNak36tmWLDcX id="family">
+        <aUoow4ZrkQSncbywChVt3Y id="family">
           <init>
             <conduct_registration/>
             <ensure/>
@@ -26,9 +26,6 @@
             <certificate/>
             <children/>
             <women/>
-            <pregnant/>
-            <pregnancy_form/>
-            <fp_form/>
           </caregiver>
           <other_fam>
             <family_mem/>
@@ -45,7 +42,6 @@
               <relationship/>
               <fam_number/>
               <birth_cert/>
-              <sleep_net/>
             </repeat_fam>
             <repeat_fam>
               <fam_names/>
@@ -59,56 +55,51 @@
               <relationship/>
               <fam_number/>
               <birth_cert/>
-              <sleep_net/>
             </repeat_fam>
           </other_fam>
           <meta>
             <instanceID/>
           </meta>
-        </a54WWtSqvaNak36tmWLDcX>
+        </aUoow4ZrkQSncbywChVt3Y>
       </instance>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/init/conduct_registration" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/init/ensure" readonly="true()" relevant=" /a54WWtSqvaNak36tmWLDcX/init/conduct_registration  = 'person'" type="string"/>
-      <bind constraint="selected( /a54WWtSqvaNak36tmWLDcX/check/registered ,'no')" jr:constraintMsg="Please exit the workflow. The household is already registered !" nodeset="/a54WWtSqvaNak36tmWLDcX/check/registered" required="true()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/check/household_area" relevant="selected( /a54WWtSqvaNak36tmWLDcX/check/registered , 'no')" required="true()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/check/serving_household" relevant="selected( /a54WWtSqvaNak36tmWLDcX/check/household_area , 'no')" required="true()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/check/specify" relevant="selected( /a54WWtSqvaNak36tmWLDcX/check/serving_household , 'other')" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver" relevant="selected( /a54WWtSqvaNak36tmWLDcX/check/registered , 'no')"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/names" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/optional" required="false()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/gender" required="true()" type="string"/>
-      <bind constraint=". &gt;= 1 and . &lt;= 120" jr:constraintMsg="Age must be between 1 and 120" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/age" required="true()" type="int"/>
-      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/primary_number" required="false()" type="string"/>
-      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/secondary_number" required="false()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/confirm" readonly="true()" relevant="string-length( /a54WWtSqvaNak36tmWLDcX/caregiver/primary_number ) &gt; 0" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/certificate" required="true()" type="string"/>
-      <bind constraint=". &gt;=0" jr:constraintMsg="Number of children must be greater or equal to 0" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/children" required="true()" type="int"/>
-      <bind constraint=". &gt;=0" jr:constraintMsg="Number of women must be greater or equal to 0" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/women" required="true()" type="int"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/pregnant" relevant="selected( /a54WWtSqvaNak36tmWLDcX/caregiver/gender , 'female')" required="true()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/pregnancy_form" readonly="true()" relevant="selected( /a54WWtSqvaNak36tmWLDcX/caregiver/pregnant , 'yes')" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/caregiver/fp_form" readonly="true()" relevant="selected( /a54WWtSqvaNak36tmWLDcX/caregiver/pregnant , 'no')" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/family_mem" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/add_fam" readonly="true()" relevant="selected( /a54WWtSqvaNak36tmWLDcX/other_fam/family_mem , 'yes')" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam" relevant="selected( /a54WWtSqvaNak36tmWLDcX/other_fam/family_mem , 'yes')"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_names" required="true()" type="string"/>
-      <bind jr:constraintMsg="This field is required" nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/method_dob" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/cal_dob" relevant="selected( ../method_dob , 'calendar')" required="true()" type="date"/>
-      <bind calculate="int(floor((today() -  ../cal_dob ) div 365.25))" nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/cal_years" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/cal_age" readonly="true()" type="string"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 130" jr:constraintMsg="Age must be between 0 and 130" nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_years" relevant="selected( ../method_dob , 'curr_age')" required="true()" type="int"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 11" jr:constraintMsg="Months must between 0 and 11" nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_month" relevant="selected( ../method_dob , 'curr_age')" required="true()" type="int"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_gender" required="true()" type="string"/>
-      <bind constraint="(. = 'spouse' and  ../cal_age  &gt;= 15) or ( ../cal_age  &gt;= 0) or (. = 'sister' and  ../fam_gender  = 'female') or (. = 'brother' and  ../fam_gender  = 'male') or ( ../fam_gender  != 'sister' and  ../fam_gender  != 'brother')" jr:constraintMsg="Invalid selection. Check on the relationship to the caregiver and the age i.e. a spouse cannot be under 15 years. Check the relationship to the caregiver and the gender i.e. a sister cannot be male and a brother cannot be female." nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/relationship" type="string"/>
-      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_number" relevant=" ../cal_age  &gt;= 16" required="false()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/birth_cert" required="true()" type="string"/>
-      <bind nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/sleep_net" required="true()" type="string"/>
-      <bind jr:preload="uid" nodeset="/a54WWtSqvaNak36tmWLDcX/meta/instanceID" readonly="true()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/init/conduct_registration" required="true()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/init/ensure" readonly="true()" relevant=" /aUoow4ZrkQSncbywChVt3Y/init/conduct_registration  = 'person'" type="string"/>
+      <bind constraint="selected( /aUoow4ZrkQSncbywChVt3Y/check/registered ,'no')" jr:constraintMsg="Please exit the workflow. The household is already registered !" nodeset="/aUoow4ZrkQSncbywChVt3Y/check/registered" required="true()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/check/household_area" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/check/registered , 'no')" required="true()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/check/serving_household" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/check/household_area , 'no')" required="true()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/check/specify" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/check/serving_household , 'other')" required="true()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/check/registered , 'no')"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/names" required="true()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/optional" required="false()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/gender" required="true()" type="string"/>
+      <bind constraint=". &gt;= 1 and . &lt;= 120" jr:constraintMsg="Age must be between 1 and 120" nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/age" required="true()" type="int"/>
+      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/primary_number" required="false()" type="string"/>
+      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/secondary_number" required="false()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/confirm" readonly="true()" relevant="string-length( /aUoow4ZrkQSncbywChVt3Y/caregiver/primary_number ) &gt; 0" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/certificate" required="true()" type="string"/>
+      <bind constraint=". &gt;=0" jr:constraintMsg="Number of children must be greater or equal to 0" nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/children" required="true()" type="int"/>
+      <bind constraint=". &gt;=0" jr:constraintMsg="Number of women must be greater or equal to 0" nodeset="/aUoow4ZrkQSncbywChVt3Y/caregiver/women" required="true()" type="int"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/family_mem" required="true()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/add_fam" readonly="true()" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/other_fam/family_mem , 'yes')" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam" relevant="selected( /aUoow4ZrkQSncbywChVt3Y/other_fam/family_mem , 'yes')"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_names" required="true()" type="string"/>
+      <bind jr:constraintMsg="This field is required" nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/method_dob" required="true()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/cal_dob" relevant="selected( ../method_dob , 'calendar')" required="true()" type="date"/>
+      <bind calculate="int(floor((today() -  ../cal_dob ) div 365.25))" nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/cal_years" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/cal_age" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 130" jr:constraintMsg="Age must be between 0 and 130" nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_years" relevant="selected( ../method_dob , 'curr_age')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 11" jr:constraintMsg="Months must between 0 and 11" nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_month" relevant="selected( ../method_dob , 'curr_age')" required="true()" type="int"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_gender" required="true()" type="string"/>
+      <bind constraint="(. = 'spouse' and  ../cal_age  &gt;= 15) or ( ../cal_age  &gt;= 0) or (. = 'sister' and  ../fam_gender  = 'female') or (. = 'brother' and  ../fam_gender  = 'male') or ( ../fam_gender  != 'sister' and  ../fam_gender  != 'brother')" jr:constraintMsg="Invalid selection. Check on the relationship to the caregiver and the age i.e. a spouse cannot be under 15 years. Check the relationship to the caregiver and the gender i.e. a sister cannot be male and a brother cannot be female." nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/relationship" type="string"/>
+      <bind constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_number" relevant=" ../cal_age  &gt;= 16" required="false()" type="string"/>
+      <bind nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/birth_cert" required="true()" type="string"/>
+      <bind jr:preload="uid" nodeset="/aUoow4ZrkQSncbywChVt3Y/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">
-    <group appearance="field-list" ref="/a54WWtSqvaNak36tmWLDcX/init">
+    <group appearance="field-list" ref="/aUoow4ZrkQSncbywChVt3Y/init">
       <label>Registration method</label>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/init/conduct_registration">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/init/conduct_registration">
         <label>How are you conducting this household registration?</label>
         <item>
           <label>In Person</label>
@@ -119,13 +110,13 @@
           <value>phone</value>
         </item>
       </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/init/ensure">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/init/ensure">
         <label>&lt;p style = "color:red; font-weight:bold"&gt;Ensure you are dressed in personal protective equipment (PPE) including a mask and gloves. Keep a distance of 2 meters (2 -3 steps) when attending to the client and wash hands with soap and running water before and after attending to the household.</label>
       </input>
     </group>
-    <group appearance="field-list" ref="/a54WWtSqvaNak36tmWLDcX/check">
+    <group appearance="field-list" ref="/aUoow4ZrkQSncbywChVt3Y/check">
       <label>Registration check</label>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/check/registered">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/check/registered">
         <label>Has this Household been registered by another CHV?</label>
         <item>
           <label>Yes</label>
@@ -136,7 +127,7 @@
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/check/household_area">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/check/household_area">
         <label>Is this household in your area?</label>
         <item>
           <label>Yes</label>
@@ -147,7 +138,7 @@
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/check/serving_household">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/check/serving_household">
         <label>Why are you serving this household?</label>
         <item>
           <label>There is no CHV in the clients area</label>
@@ -166,19 +157,19 @@
           <value>other</value>
         </item>
       </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/check/specify">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/check/specify">
         <label>Please specify</label>
       </input>
     </group>
-    <group appearance="field-list" ref="/a54WWtSqvaNak36tmWLDcX/caregiver">
+    <group appearance="field-list" ref="/aUoow4ZrkQSncbywChVt3Y/caregiver">
       <label>Primary Caregiver</label>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/names">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/names">
         <label>Names</label>
       </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/optional">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/optional">
         <label>Notes (optional)</label>
       </input>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/caregiver/gender">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/gender">
         <label>Gender</label>
         <item>
           <label>Male</label>
@@ -189,21 +180,21 @@
           <value>female</value>
         </item>
       </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/age">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/age">
         <label>Age</label>
       </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/primary_number">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/primary_number">
         <label>Primary Mobile Number &lt;br&gt; &lt;p style = "font-size: 9; font-style:italic; opacity:0.3"&gt; Use one of the following formats: 07XX XXX XXX or 01XX XXX XXX &lt;/p&gt;</label>
       </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/secondary_number">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/secondary_number">
         <label>Secondary Mobile Number &lt;br&gt; &lt;p style = "font-size: 9; font-style:italic; opacity:0.3"&gt; Use one of the following formats: 07XX XXX XXX or 01XX XXX XXX &lt;/p&gt;</label>
       </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/confirm">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/confirm">
         <label> &lt;p style = &quot;font-weight: bold&quot;&gt;Please verify that the phone numbers are accurate
-&lt;br&gt;Primary Number: <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/primary_number "/> &lt;br&gt;Secondary Number: <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/secondary_number "/>&lt;/p&gt; </label>
+&lt;br&gt;Primary Number: <output value=" /aUoow4ZrkQSncbywChVt3Y/caregiver/primary_number "/> &lt;br&gt;Secondary Number: <output value=" /aUoow4ZrkQSncbywChVt3Y/caregiver/secondary_number "/>&lt;/p&gt; </label>
       </input>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/caregiver/certificate">
-        <label> Does <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/names "/> have certificate? </label>
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/certificate">
+        <label> Does <output value=" /aUoow4ZrkQSncbywChVt3Y/caregiver/names "/> have certificate? </label>
         <item>
           <label>Yes</label>
           <value>yes</value>
@@ -213,33 +204,16 @@
           <value>no</value>
         </item>
       </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/children">
-        <label> How many children under 5 are in the family of <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/names "/>? </label>
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/children">
+        <label> How many children under 5 are in the family of <output value=" /aUoow4ZrkQSncbywChVt3Y/caregiver/names "/>? </label>
       </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/women">
-        <label> How many women aged 10 and 49 are <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/names "/> household? (including the primary caregiver) </label>
-      </input>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/caregiver/pregnant">
-        <label> Is <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/names "/> currently pregnant? </label>
-        <item>
-          <label>Yes</label>
-          <value>yes</value>
-        </item>
-        <item>
-          <label>No</label>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/pregnancy_form">
-        <label> &lt;p style = &quot;font-weight: bold&quot;&gt;Remember to complete a pregnancy registration for <output value=" /a54WWtSqvaNak36tmWLDcX/caregiver/names "/>. &lt;/p&gt; </label>
-      </input>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/caregiver/fp_form">
-        <label>&lt;p style = "font-weight:bold"&gt;Please fill out an FP form for the primary caregiver after registration&lt;/p&gt;&lt;br&gt;&lt;p style = "font-size: 9; font-style:italic; opacity:0.3"&gt;Applicable only to the following branches: Butula, Malava, Port Victoria, Shinyalu and Suneka</label>
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/caregiver/women">
+        <label> How many women aged 10 and 49 are <output value=" /aUoow4ZrkQSncbywChVt3Y/caregiver/names "/> household? (including the primary caregiver) </label>
       </input>
     </group>
-    <group appearance="field-list" ref="/a54WWtSqvaNak36tmWLDcX/other_fam">
+    <group appearance="field-list" ref="/aUoow4ZrkQSncbywChVt3Y/other_fam">
       <label>Other family members</label>
-      <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/family_mem">
+      <select1 ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/family_mem">
         <label>Do you have other family members?</label>
         <item>
           <label>Yes</label>
@@ -250,16 +224,16 @@
           <value>no</value>
         </item>
       </select1>
-      <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/add_fam">
+      <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/add_fam">
         <label>&lt;p style = "font-weight: bold"&gt;MESSAGE TO CHV: &lt;/p&gt;Please add all the family members</label>
       </input>
-      <group ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam">
+      <group ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam">
         <label>NO_LABEL</label>
-        <repeat nodeset="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam">
-          <input appearance="page" ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_names">
+        <repeat nodeset="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam">
+          <input appearance="page" ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_names">
             <label>Names</label>
           </input>
-          <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/method_dob">
+          <select1 ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/method_dob">
             <label>Method to select date of birth</label>
             <item>
               <label>With calendar (preferred)</label>
@@ -270,18 +244,18 @@
               <value>curr_age</value>
             </item>
           </select1>
-          <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/cal_dob">
+          <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/cal_dob">
             <label>Date of Birth</label>
           </input>
-          <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/cal_age">
+          <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/cal_age">
             <label> &lt;p style = &quot;font-size: 9; font-style:italic; opacity:0.3&quot;&gt;Age in years&lt;/p&gt;<output value=" ../cal_age "/> </label></input>
-          <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_years">
+          <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_years">
             <label>Age &lt;br&gt; &lt;p style = "font-size: 9; font-style:italic; opacity:0.3"&gt;Age in years&lt;/p&gt;</label>
           </input>
-          <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_month">
+          <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_month">
             <label>&lt;p style = "font-size: 9; font-style:italic; opacity:0.3"&gt;Age in months&lt;/p&gt;</label>
           </input>
-          <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_gender">
+          <select1 ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_gender">
             <label>Gender</label>
             <item>
               <label>Male</label>
@@ -292,7 +266,7 @@
               <value>female</value>
             </item>
           </select1>
-          <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/relationship">
+          <select1 ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/relationship">
             <label>What is the relationship to the primary caregiver?</label>
             <item>
               <label>Spouse</label>
@@ -319,21 +293,10 @@
               <value>fam_other</value>
             </item>
           </select1>
-          <input ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/fam_number">
+          <input ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/fam_number">
             <label><output value=" ../fam_names "/> Mobile Number &lt;br&gt; &lt;p style = &quot;font-size: 9; font-style:italic; opacity:0.3&quot;&gt; Use one of the following formats: 07XX XXX XXX or 01XX XXX XXX &lt;/p&gt; </label></input>
-          <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/birth_cert">
+          <select1 ref="/aUoow4ZrkQSncbywChVt3Y/other_fam/repeat_fam/birth_cert">
             <label> Does <output value=" ../fam_names "/> have a birth certificate? </label>
-            <item>
-              <label>Yes</label>
-              <value>yes</value>
-            </item>
-            <item>
-              <label>No</label>
-              <value>no</value>
-            </item>
-          </select1>
-          <select1 ref="/a54WWtSqvaNak36tmWLDcX/other_fam/repeat_fam/sleep_net">
-            <label> Did <output value=" ../fam_names "/> sleep under insecticide treated net? </label>
             <item>
               <label>Yes</label>
               <value>yes</value>
