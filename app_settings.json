@@ -14,16 +14,17 @@
   "date_format": "D MMM, YYYY",
   "reported_date_format": "DD-MMM-YYYY HH:mm:ss",
   "roles": {
-
     "data_entry": {
       "name": "usertype.data-entry"
     },
-    "scmoh": {
-      "name": "usertype.subcounty-officer"
+    "DSO":{
+        "name":"Disease-surveillance-officer"
     },
-    "scdso": {
-      "name": "usertype.subcounty-disease-surveillance-officer"
-    },
+    "facility_Dsteam":{
+      "name":"Facility disease surveillance team"
+  },
+
+
     "analytics": {
       "name": "usertype.analytics"
     },
@@ -72,6 +73,7 @@
     "can_export_messages": [
       "analytics",
       "program_officer",
+      "disease_surveillance_officer",
       "chp_supervisor",
       "chp"
     ],
@@ -80,7 +82,7 @@
     "can_update_reports": ["program_officer", "chp_supervisor", "chp"],
     "can_update_users": ["program_officer"],
     "can_export_dhis": ["national_admin", "crfo"],
-    "can_verify_reports": ["program_officer", "chp_supervisor", "chp"],
+    "can_verify_reports": ["program_officer", "chw_supervisor", "chw"],
     "can_view_analytics": [
       "analytics",
       "program_officer",
@@ -110,7 +112,7 @@
     ],
     "can_view_users": ["program_officer"],
     "can_write_wealth_quintiles": [],
-    "can_aggregate_targets": ["chp_supervisor"],
+    "can_aggregate_targets": ["chw_supervisor"],
     "can_upgrade": ["program_officer"],
     "can_view_old_filter_and_search": [],
     "can_view_old_action_bar": []
@@ -127,15 +129,15 @@
       "edit_form": "form:contact:area_health_facility:edit"
     },
     {
-      "id": "area_disease_surveillance_officer",
-      "icon": "area-disease-surveillance-officer",
-      "name_key": "contact.type.area_disease_surveillance_officer",
-      "group_key": "contact.type.area_disease_surveillance_officer.plural",
-      "create_key": "contact.type.area_disease_surveillance_officer.new",
-      "edit_key": "contact.type.area_disease_surveillance_officer.edit",
+      "id": "area_health_facility_nurse",
+      "icon": "area-health-facility-nurse",
+      "name_key": "contact.type.area_health_facility_nurse",
+      "group_key": "contact.type.area_health_facility_nurse.plural",
+      "create_key": "contact.type.area_health_facility_nurse.new",
+      "edit_key": "contact.type.area_health_facility_nurse.edit",
       "parents": ["area_health_facility"],
-      "create_form": "form:contact:area_disease_surveillance_officer:create",
-      "edit_form": "form:contact:area_disease_surveillance_officer:edit",
+      "create_form": "form:contact:area_health_facility_nurse:create",
+      "edit_form": "form:contact:area_health_facility_nurse:edit",
       "person": true
     },
     {
@@ -173,15 +175,15 @@
       "edit_form": "form:contact:community_health_area:edit"
     },
     {
-      "id": "community_health_personnel",
-      "icon": "community-health-personnel",
-      "name_key": "contact.type.community_personnel",
-      "group_key": "contact.type.community_health_personnel.plural",
-      "create_key": "contact.type.community_health_personnel.new",
-      "edit_key": "contact.type.community_health_personnel.edit",
+      "id": "community_health_volunteer",
+      "icon": "community-health-volunteer",
+      "name_key": "contact.type.community_health_volunteer",
+      "group_key": "contact.type.community_health_volunteer.plural",
+      "create_key": "contact.type.community_health_volunteer.new",
+      "edit_key": "contact.type.community_health_volunteer.edit",
       "parents": ["community_health_area"],
-      "create_form": "form:contact:community_health_personnel:create",
-      "edit_form": "form:contact:community_health_personnel:edit",
+      "create_form": "form:contact:community_health_volunteer:create",
+      "edit_form": "form:contact:community_health_volunteer:edit",
       "person": true
     },
     {
@@ -208,5 +210,7 @@
       "person": true
     }
   ]
- 
+  
+  
+  
 }
