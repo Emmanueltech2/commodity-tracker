@@ -108,5 +108,27 @@ module.exports = [
     },
     groupBy: contact => getHouseholdId(contact),
     passesIfGroupCount: { gte: 2 },
+  },
+  {
+    id: 'moh-515-all-time',
+    type: 'count',
+    icon: 'icon-healthcare-assessment',
+    goal: -1,
+    translation_key: 'targets.moh515.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'reports',
+    appliesToType: ['MOH 515 (Post Outbreak)'],
+    date: 'now'
+  },
+  {
+    id: 'moh-515-this-month',
+    type: 'count',
+    icon: 'icon-healthcare-assessment',
+    goal: 1,
+    translation_key: 'targets.moh515.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    appliesTo: 'reports',
+    appliesToType: ['MOH 515 (Post Outbreak)'],
+    date: 'reported'
   }
 ];
