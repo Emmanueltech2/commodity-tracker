@@ -2,7 +2,7 @@
 //const MS_IN_DAY = 24 * 60 * 60 * 1000;
 //const MAX_DAYS_IN_SUSPICION = 7; // 1 week = 7 days
 
-const isSuspicionFormsArray = ['patient.suspicion_followup'];
+const isSuspicionFormsArray = ['cholera_suspicion_follow_up'];
 
 // Helper functions
 function isAlive(contact) {
