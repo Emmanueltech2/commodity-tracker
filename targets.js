@@ -1,134 +1,162 @@
-// Define a function to get the household ID based on the hierarchy configuration
-const getHouseholdId = (contact) => contact.contact && contact.contact.type === 'clinic' ? contact.contact._id : contact.contact.parent && contact.contact.parent._id;
-
-// Define a function to determine if contact is a patient
-const isPatient = (contact) => contact.contact && contact.contact.type === 'person' && contact.contact.parent && contact.contact.parent.parent && contact.contact.parent.parent.parent;
+const extras = require('./nools-extras');
+const {
+  isAlive,
+  getSubsequentPregnancyFollowUps,
+  getMostRecentLMPDateForPregnancy,
+  isActivePregnancy,
+  countANCFacilityVisits,
+  getField
+} = extras;
 
 module.exports = [
+
   {
-    id: 'assessments-all-time',
+    id: 'deaths-this-month',
     type: 'count',
-    icon: 'icon-healthcare-assessment',
-    goal: -1,
-    translation_key: 'targets.assessments.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'reports',
-    appliesToType: ['assessment'],
-    date: 'now'
-  },
-  {
-    id: 'assessments-this-month',
-    type: 'count',
-    icon: 'icon-healthcare-assessment',
-    goal: 2,
-    translation_key: 'targets.assessments.title',
+    icon: 'icon-death-general',
+    goal: 0,
+    translation_key: 'targets.death_reporting.deaths.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
-    appliesTo: 'reports',
-    appliesToType: ['assessment'],
-    date: 'reported'
-  },
-  {
-    id: 'total-contacts-with-cough-this-month',
-    type: 'count',
-    icon: 'icon-cough',
-    goal: -1,
-    translation_key: 'targets.assessments.total.cough.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
-    appliesTo: 'reports',
-    appliesToType: ['assessment'],
-    appliesIf: function (contact, report) {
-      return Utils.getField(report, 'group_assessment.cough') === 'yes';
-    },
-    idType: 'contact',
-    date: 'reported'
-  },
-  {
-    id: 'percentage-contacts-with-cough-this-month',
-    type: 'percent',
-    icon: 'icon-cough',
-    goal: -1,
-    translation_key: 'targets.assessments.percentage.cough.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
-    percentage_count_translation_key: 'targets.assessments.percentage.with.cough',
-    appliesTo: 'reports',
-    appliesToType: ['assessment'],
+    appliesTo: 'contacts',
+    appliesToType: ['person'],
     appliesIf: function (contact) {
-      return isPatient(contact);
+      return !isAlive(contact);
     },
-    passesIf: function(contact, report) {
-      return Utils.getField(report, 'group_assessment.cough') === 'yes';
-    },
-    idType: 'contact',
-    date: 'reported'
+    date: (contact) => contact.contact.date_of_death
   },
+
+  // ANC: New Pregnancies as a count - this month with LMP, with a goal of 20
   {
-    id: 'households-with-assessments-this-month',
+    id: 'pregnancy-registrations-this-month',
     type: 'count',
-    icon: 'icon-household',
-    goal: 2,
-    translation_key: 'targets.households.with.assessments.title',
+    icon: 'icon-pregnancy',
+    goal: 20,
+    translation_key: 'targets.anc.new_pregnancy_registrations.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
     appliesTo: 'reports',
-    appliesToType: ['assessment'],
+    appliesToType: ['pregnancy'],
+    appliesIf: function (contact, report) {
+      if (!report) {return false;}
+      return getMostRecentLMPDateForPregnancy(contact, report);
+    },
     date: 'reported',
-    emitCustom: (emit, original, contact) => {
-      const householdId = getHouseholdId(contact);
-      emit(Object.assign({}, original, {
-        _id: householdId,
-        pass: true
-      }));
+    idType: 'contact'
+  },
+
+  {
+    id: 'births-this-month',
+    type: 'count',
+    icon: 'icon-infant',
+    goal: -1,
+    translation_key: 'targets.births.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    appliesTo: 'contacts',
+    appliesToType: ['person'],
+    appliesIf: function (contact) {
+      return contact && contact.contact && contact.contact.date_of_birth;
+    },
+    date: (contact) => contact.contact.date_of_birth,
+    dhis: {
+      dataElement: 'kB0ZBFisE0e',
     }
   },
+
+
+  // ANC: Number of active pregnancies as a count - all time
   {
-    id: 'households-with-gt2-assessments-this-month',
-    type: 'percent',
-    icon: 'icon-household',
-    goal: 60,
-    translation_key: 'targets.households.with.gt2.assessments.title',
-    subtitle_translation_key: 'targets.all_time.subtitle',
-    appliesTo: 'contacts',
-    appliesToType: ['person', 'clinic'], // Need the total number of households as the denominator
-    date: 'now',
-    emitCustom: (emit, original, contact) => {
-      const householdId = getHouseholdId(contact);
-      if (isPatient(contact)) {
-        if (contact.reports.some(report => report.form === 'assessment')) {
-          emit(Object.assign({}, original, {
-            _id: householdId, // Emits a passing target instance with the household ID as the target instance ID
-            pass: true
-          }));
-        }
-      }
-      if (contact.contact && contact.contact.type === 'clinic') { // This represents the denominator, which is the total number of households
-        emit(Object.assign({}, original, {
-          _id: householdId,
-          pass: false, // Set to false so that it is counted in the denominator
-        }));
-      }
-    },
-    groupBy: contact => getHouseholdId(contact),
-    passesIfGroupCount: { gte: 2 },
-  },
-  {
-    id: 'moh-515-all-time',
+    id: 'active-pregnancies',
     type: 'count',
-    icon: 'icon-healthcare-assessment',
+    icon: 'icon-pregnancy',
     goal: -1,
-    translation_key: 'targets.moh515.title',
+    translation_key: 'targets.anc.active_pregnancies.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
-    appliesToType: ['MOH 515 (Post Outbreak)'],
-    date: 'now'
+    appliesToType: ['pregnancy'],
+    appliesIf: function (contact, report) {
+      return isActivePregnancy(contact, report);
+    },
+    date: 'now',
+    idType: 'contact'
+  },
+
+  // ANC: Number of active pregnancies as a count - all time - with 1+ facility visits
+  {
+    id: 'active-pregnancies-1+-visits',
+    type: 'count',
+    icon: 'icon-clinic',
+    goal: -1,
+    translation_key: 'targets.anc.active_pregnancies_1p_visits.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'reports',
+    appliesToType: ['pregnancy'],
+    appliesIf: function (contact, report) {
+      if (!isActivePregnancy(contact, report)) {return false;}
+      const visitCount = countANCFacilityVisits(contact, report);
+      return visitCount > 0;
+    },
+    date: 'now',
+    idType: 'contact'
+  },
+
+  {
+    id: 'facility-deliveries',
+    type: 'percent',
+    icon: 'icon-mother-child',
+    goal: -1,
+    translation_key: 'targets.anc.facility_deliveries.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'reports',
+    appliesToType: ['delivery'],
+    appliesIf: function (contact, report) {
+      return getField(report, 'delivery_outcome.delivery_place');
+    },
+    passesIf: function (contact, report) {
+      return getField(report, 'delivery_outcome.delivery_place') === 'health_facility';
+    },
+    date: 'now',
+    idType: 'contact',
+    dhis: {
+      dataElement: 'e22tIwy1nKR',
+      categoryOptionCombo: 'HllvX50cXC0',
+      attributeOptionCombo: 'HllvX50cXC0',
+    }
+  },
+
+  {
+    id: 'active-pregnancies-4+-visits',
+    type: 'count',
+    icon: 'icon-clinic',
+    goal: -1,
+    translation_key: 'targets.anc.active_pregnancies_4p_visits.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
+    appliesTo: 'reports',
+    appliesToType: ['pregnancy'],
+    appliesIf: function (contact, report) {
+      if (!isActivePregnancy(contact, report)) {return false;}
+      const visitCount = countANCFacilityVisits(contact, report);
+      return visitCount > 3;
+    },
+    date: 'now',
+    idType: 'contact'
   },
   {
-    id: 'moh-515-this-month',
+    id: 'active-pregnancies-8+-contacts',
     type: 'count',
-    icon: 'icon-healthcare-assessment',
-    goal: 1,
-    translation_key: 'targets.moh515.title',
-    subtitle_translation_key: 'targets.this_month.subtitle',
+    icon: 'icon-follow-up',
+    goal: -1,
+    translation_key: 'targets.anc.active_pregnancies_8p_contacts.title',
+    subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'reports',
-    appliesToType: ['MOH 515 (Post Outbreak)'],
-    date: 'reported'
-  }
+    appliesToType: ['pregnancy'],
+    appliesIf: function (contact, report) {
+      if (!isActivePregnancy(contact, report)) {return false;}
+      const pregnancyRegistrationCount = 1;
+      const pregnancyHomeVisitCount = getSubsequentPregnancyFollowUps(contact, report).length || 0;
+      const facilityVisitCount = countANCFacilityVisits(contact, report) || 0;
+      return pregnancyRegistrationCount + pregnancyHomeVisitCount + facilityVisitCount > 7;
+    },
+    date: 'now',
+    idType: 'contact'
+  },
+
 ];

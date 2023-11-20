@@ -117,7 +117,7 @@
             <value>Vomits everything</value>
           </text>
           <text id="/cholera_suspicion_follow_up/danger_signs:label">
-            <value>Danger Sign Follow-up - Baby</value>
+            <value>Cholera Follow Up Form</value>
           </text>
           <text id="/cholera_suspicion_follow_up/inputs/contact/_id:label">
             <value>What is the patient's name?</value>
@@ -158,7 +158,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_suspicion_follow_up id="cholera_follow_up" prefix="J1!cholera_follow_up!" delimiter="#" version="2023-11-11 19:58:13">
+        <cholera_suspicion_follow_up id="cholera_follow_up" prefix="J1!cholera_follow_up!" delimiter="#" version="2023-11-15 18:51:00">
           <inputs>
             <meta>
               <location>
