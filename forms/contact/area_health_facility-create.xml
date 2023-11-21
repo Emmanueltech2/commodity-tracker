@@ -756,8 +756,8 @@
       <bind nodeset="/data/contact/type" type="string"/>
       <bind nodeset="/data/contact/contact_type" type="string"/>
       <bind nodeset="/data/contact/name" type="string" required="true()"/>
-      <bind nodeset="/data/contact/phone" type="string" constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: 0712345678"/>
-      <bind nodeset="/data/contact/phone_alternate" type="string" constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: 0112345678"/>
+      <bind nodeset="/data/contact/phone" type="string" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: 0712345678" constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
+      <bind nodeset="/data/contact/phone_alternate" type="string" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: 0112345678" constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
       <bind nodeset="/data/contact/meta/created_by" type="string" calculate="../../../inputs/user/name"/>
       <bind nodeset="/data/contact/meta/created_by_person_uuid" type="string" calculate="../../../inputs/user/contact_id"/>
       <bind nodeset="/data/contact/meta/created_by_place_uuid" type="string" calculate="../../../inputs/user/facility_id"/>
