@@ -219,6 +219,7 @@
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/visit_confirm" type="select1" required="true()"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/reason" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/visit_confirm  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_sign_present" type="select1" required="true()"/>
+<<<<<<< HEAD
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/signs" type="select" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'" required="true()"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
@@ -234,6 +235,57 @@
       <bind nodeset="/cholera_suspicion_follow_up/group_review/facility_recommendation" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/recommend" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/group_review/todo_task" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+=======
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/diarrhoea" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/dehydration" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/vomit" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/thirst" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/restlessness" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/leg_cramps" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/fever" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/dry_skin" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/r_danger_sign_present" type="string" calculate="if(selected(../diarrhoea, 'yes') or
+selected(../dehydration, 'yes') or
+selected(../difficulty_feeding, 'yes') or
+selected(../vomit, 'yes') or
+selected(../thirst, 'yes') or
+selected(../restlessness, 'yes') or
+selected(../leg_cramps, 'yes') or
+selected(../fever, 'yes') or
+selected(../dry_skin, 'yes'), 'yes', 
+if(selected(../diarrhoea, 'no') and
+selected(../dehydration, 'no') and
+selected(../difficulty_feeding, 'no') and
+selected(../vomit, 'no') and
+selected(../thirst, 'no') and
+selected(../restlessness, 'no') and
+selected(../leg_cramps, 'no') and
+selected(../fever, 'no') and
+selected(../dry_skin, 'no'), 'no', ''))"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant="../danger_sign_present = 'no' and ../r_danger_sign_present = 'no'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_1" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__visited_hf" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/visit_confirm "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__still_experiencing_danger_sign" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__diarrhoea" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/diarrhoea "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__dehydration" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/dehydration "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__difficulty_feeding_or_drinking" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/difficulty_feeding "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__vomits_everything" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/vomit "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__thirst_or_unconscious" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/thirst "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__body_restlessnessness" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/restlessness "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__leg_cramps_color" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/leg_cramps "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__fever" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/fever "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__dry_skin_color" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/dry_skin "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/__has_danger_sign" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/r_danger_sign_present "/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__patient_uuid" type="string" calculate="../../../inputs/contact/_id"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__patient_id" type="string" calculate="../../../inputs/contact/patient_id"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__household_uuid" type="string" calculate="../../../inputs/contact/parent/_id"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__source" type="string" calculate="../../../inputs/source"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__source_id" type="string" calculate="../../../inputs/source_id"/>
+      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__delivery_uuid" type="string" calculate="../../../inputs/delivery_uuid"/>
+>>>>>>> 7936dee (implemented working prototype)
       <bind nodeset="/cholera_suspicion_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>

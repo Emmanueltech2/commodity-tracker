@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Patient suspicion Case follow-up</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/patient_suspicion_follow_up/danger_signs/blue_skin/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/blue_skin/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/blue_skin:label">
+            <value>Blue skin color (hypothermia)</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/congratulate_no_ds_note:label">
+            <value>Great news! Please continue to closely monitor the patient.</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/convulsion/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/convulsion/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/convulsion:label">
+            <value>Convulsions</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/danger_sign_present/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/danger_sign_present/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/danger_sign_present:label">
+            <value>Is the Patient still experiencing any danger signs?</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/danger_signs_question_note:label">
+            <value>Please confirm if the patient has any of the following danger signs.</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/diarrhoea/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/diarrhoea/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/diarrhoea:label">
+            <value>Diarrhoea</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/difficulty_feeding/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/difficulty_feeding/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/difficulty_feeding:label">
+            <value>Difficulty feeding or drinking</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/drowsy/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/drowsy/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/drowsy:label">
+            <value>Drowsy or unconscious</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/fever/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/fever/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/fever:label">
+            <value>Fever</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/refer_patient_note_1:label">
+            <value>The patient should be taken to the health facility immediately if experiencing any of these danger signs.</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/refer_patient_note_2:label">
+            <value>Please advise the caregiver to do so and accompany them if possible.</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/stiff/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/stiff/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/stiff:label">
+            <value>Body stiffness</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/visit_confirm/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/visit_confirm/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/visit_confirm:label">
+            <value>Was the Patient taken to the health facility as recommended?</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/vomit/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/vomit/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/vomit:label">
+            <value>Vomits everything</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/yellow_skin/no:label">
+            <value>No</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/yellow_skin/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs/yellow_skin:label">
+            <value>Yellow skin color</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/danger_signs:label">
+            <value>Suspicious case Follow-up</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/_id:label">
+            <value>What is the patient's name?</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/date_of_birth:label">
+            <value>Date of Birth</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/name:label">
+            <value>Name</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/parent/_id:label">
+            <value>Parent ID</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/parent/parent/contact/chp_name:label">
+            <value>CHP name</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/parent/parent/contact/phone:label">
+            <value>CHP phone</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/patient_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/sex:label">
+            <value>Sex</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/contact/short_name:label">
+            <value>Short Name</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/delivery_uuid:label">
+            <value>Suspicion Report ID</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/source:label">
+            <value>Source</value>
+          </text>
+          <text id="/patient_suspicion_follow_up/inputs/source_id:label">
+            <value>Source ID</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <patient_suspicion_follow_up id="patient_follow_up" prefix="J1!patient_follow_up!" delimiter="#" version="2023-09-30 16:55:12">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source>user</source>
+            <source_id/>
+            <delivery_uuid/>
+            <contact>
+              <_id/>
+              <name/>
+              <short_name/>
+              <patient_id/>
+              <date_of_birth>0</date_of_birth>
+              <sex/>
+              <parent>
+                <_id/>
+                <parent>
+                  <contact>
+                    <chp_name/>
+                    <phone/>
+                  </contact>
+                </parent>
+              </parent>
+            </contact>
+          </inputs>
+          <patient_age_in_years tag="hidden"/>
+          <patient_uuid tag="hidden"/>
+          <patient_id tag="hidden"/>
+          <patient_name tag="hidden"/>
+          <t_danger_signs_referral_follow_up_date tag="hidden"/>
+          <t_danger_signs_referral_follow_up tag="hidden"/>
+          <danger_signs>
+            <visit_confirm/>
+            <danger_sign_present/>
+            <danger_signs_question_note tag="hidden"/>
+            <diarrhoea/>
+            <convulsion/>
+            <difficulty_feeding/>
+            <vomit/>
+            <drowsy/>
+            <stiff/>
+            <yellow_skin/>
+            <fever/>
+            <blue_skin/>
+            <r_danger_sign_present tag="hidden"/>
+            <congratulate_no_ds_note tag="hidden"/>
+            <refer_patient_note_1 tag="hidden"/>
+            <refer_patient_note_2 tag="hidden"/>
+          </danger_signs>
+          <data tag="hidden">
+            <__visited_hf/>
+            <__still_experiencing_danger_sign/>
+            <__diarrhoea/>
+            <__convulsions/>
+            <__difficulty_feeding_or_drinking/>
+            <__vomits_everything/>
+            <__drowsy_or_unconscious/>
+            <__body_stiffness/>
+            <__yellow_skin_color/>
+            <__fever/>
+            <__blue_skin_color/>
+            <__has_danger_sign/>
+            <meta tag="hidden">
+              <__patient_uuid/>
+              <__patient_id/>
+              <__household_uuid/>
+              <__source/>
+              <__source_id/>
+              <__delivery_uuid/>
+            </meta>
+          </data>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </patient_suspicion_follow_up>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/source" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/source_id" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/delivery_uuid" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/name" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/short_name" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/sex" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/parent/_id" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/parent/parent/contact/chp_name" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/inputs/contact/parent/parent/contact/phone" type="string"/>
+      <bind nodeset="/patient_suspicion_follow_up/patient_age_in_years" type="string" calculate="floor( difference-in-months( ../inputs/contact/date_of_birth, today() ) div 12 )"/>
+      <bind nodeset="/patient_suspicion_follow_up/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/patient_suspicion_follow_up/t_danger_signs_referral_follow_up_date" type="string" calculate="date-time(decimal-date-time(today()) + 3)"/>
+      <bind nodeset="/patient_suspicion_follow_up/t_danger_signs_referral_follow_up" type="string" calculate="../danger_signs/r_danger_sign_present"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/visit_confirm" type="select1" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/danger_sign_present" type="select1" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/diarrhoea" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/convulsion" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/difficulty_feeding" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/vomit" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/drowsy" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/stiff" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/yellow_skin" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/fever" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/blue_skin" type="select1" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'" required="true()"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/r_danger_sign_present" type="string" calculate="if(selected(../diarrhoea, 'yes') or
+selected(../convulsion, 'yes') or
+selected(../difficulty_feeding, 'yes') or
+selected(../vomit, 'yes') or
+selected(../drowsy, 'yes') or
+selected(../stiff, 'yes') or
+selected(../yellow_skin, 'yes') or
+selected(../fever, 'yes') or
+selected(../blue_skin, 'yes'), 'yes', 
+if(selected(../diarrhoea, 'no') and
+selected(../convulsion, 'no') and
+selected(../difficulty_feeding, 'no') and
+selected(../vomit, 'no') and
+selected(../drowsy, 'no') and
+selected(../stiff, 'no') and
+selected(../yellow_skin, 'no') and
+selected(../fever, 'no') and
+selected(../blue_skin, 'no'), 'no', ''))"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant="../danger_sign_present = 'no' and ../r_danger_sign_present = 'no'"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/refer_patient_note_1" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
+      <bind nodeset="/patient_suspicion_follow_up/danger_signs/refer_patient_note_2" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__visited_hf" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/visit_confirm "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__still_experiencing_danger_sign" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/danger_sign_present "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__diarrhoea" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/diarrhoea "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__convulsions" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/convulsion "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__difficulty_feeding_or_drinking" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/difficulty_feeding "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__vomits_everything" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/vomit "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__drowsy_or_unconscious" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/drowsy "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__body_stiffness" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/stiff "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__yellow_skin_color" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/yellow_skin "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__fever" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/fever "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__blue_skin_color" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/blue_skin "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/__has_danger_sign" type="string" calculate=" /patient_suspicion_follow_up/danger_signs/r_danger_sign_present "/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__patient_uuid" type="string" calculate="../../../inputs/contact/_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__patient_id" type="string" calculate="../../../inputs/contact/patient_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__household_uuid" type="string" calculate="../../../inputs/contact/parent/_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__source" type="string" calculate="../../../inputs/source"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__source_id" type="string" calculate="../../../inputs/source_id"/>
+      <bind nodeset="/patient_suspicion_follow_up/data/meta/__delivery_uuid" type="string" calculate="../../../inputs/delivery_uuid"/>
+      <bind nodeset="/patient_suspicion_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/patient_suspicion_follow_up/inputs">
+      <group ref="/patient_suspicion_follow_up/inputs/contact">
+        <input appearance="db-object" ref="/patient_suspicion_follow_up/inputs/contact/_id">
+          <label ref="jr:itext('/patient_suspicion_follow_up/inputs/contact/_id:label')"/>
+        </input>
+        <group ref="/patient_suspicion_follow_up/inputs/contact/parent">
+          <group ref="/patient_suspicion_follow_up/inputs/contact/parent/parent">
+            <group ref="/patient_suspicion_follow_up/inputs/contact/parent/parent/contact"/>
+          </group>
+        </group>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/patient_suspicion_follow_up/danger_signs">
+      <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs:label')"/>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/visit_confirm">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/visit_confirm:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/visit_confirm/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/visit_confirm/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/danger_sign_present">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/danger_sign_present:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/danger_sign_present/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/danger_sign_present/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/patient_suspicion_follow_up/danger_signs/danger_signs_question_note">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/danger_signs_question_note:label')"/>
+      </input>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/diarrhoea">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/diarrhoea:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/diarrhoea/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/diarrhoea/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/convulsion">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/convulsion:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/convulsion/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/convulsion/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/difficulty_feeding">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/difficulty_feeding:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/difficulty_feeding/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/difficulty_feeding/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/vomit">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/vomit:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/vomit/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/vomit/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/drowsy">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/drowsy:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/drowsy/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/drowsy/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/stiff">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/stiff:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/stiff/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/stiff/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/yellow_skin">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/yellow_skin:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/yellow_skin/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/yellow_skin/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/fever">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/fever:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/fever/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/fever/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/patient_suspicion_follow_up/danger_signs/blue_skin">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/blue_skin:label')"/>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/blue_skin/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/blue_skin/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/patient_suspicion_follow_up/danger_signs/congratulate_no_ds_note">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/congratulate_no_ds_note:label')"/>
+      </input>
+      <input ref="/patient_suspicion_follow_up/danger_signs/refer_patient_note_1">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/refer_patient_note_1:label')"/>
+      </input>
+      <input ref="/patient_suspicion_follow_up/danger_signs/refer_patient_note_2">
+        <label ref="jr:itext('/patient_suspicion_follow_up/danger_signs/refer_patient_note_2:label')"/>
+      </input>
+    </group>
+    <group appearance="hidden" ref="/patient_suspicion_follow_up/data">
+      <group ref="/patient_suspicion_follow_up/data/meta"/>
+    </group>
+  </h:body>
+</h:html>

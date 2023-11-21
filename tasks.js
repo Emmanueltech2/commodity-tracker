@@ -1,12 +1,15 @@
-module.exports = [{
-    name: 'follow-up-hosehold-member',
+module.exports = [
+{
+    name: 'follow-up-household-member',
     title: 'Follow up household member',
     icon: 'icon-healthcare',
     appliesTo: 'reports',
-    appliesToType: ['community_health_volunteer'],
+    appliesToType: ['household_member_assessment'],
     appliesIf: function(contact, report){
-        console.log('follow-up-hosehold-member', contact, report);
-        return report && Utils.getField(report, 'initial_symptoms') === 'yes';
+        console.log('follow-up-hosehold-member', report);
+        let userHasDangerSigns = Utils.getField(report, 'initial_symptoms') === 'yes';
+        console.log('userHasDangerSigns', userHasDangerSigns, Utils.getField(report, 'initial_symptoms'));
+        return true;
     },
     actions: [{form: 'patient_follow_up'}],
     events: [{
@@ -14,4 +17,5 @@ module.exports = [{
         end: 0,
         days: 7,
     }],
-}];
+},
+];
