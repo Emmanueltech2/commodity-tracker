@@ -6,7 +6,7 @@ module.exports = [
 {
     name: 'follow-up-household-member',
     title: 'Follow up household member',
-    icon: 'icon-healthcare',
+    icon: 'icon-follow-up',
     appliesTo: 'reports',
     appliesToType: ['household_member_assessment'],
     appliesIf: function(contact, report){
