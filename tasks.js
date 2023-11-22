@@ -13,7 +13,7 @@ module.exports = [
         let userHasDangerSigns = getField(report, 'household_member_assessment.initial_symptoms') === 'yes';
         return userHasDangerSigns;
     },
-    actions: [{form: 'patient_follow_up'}],
+    actions: [{form: 'cholera_follow_up'}],
     events: [{
         start: 7,
         end: 0,
