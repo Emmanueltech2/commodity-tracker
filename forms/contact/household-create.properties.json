@@ -1,5 +1,7 @@
 {
-    "icon": "household",
-    "title": "household"
-    
+ 
+    "context":{
+        "person": false,
+        "place": true
+}
 }

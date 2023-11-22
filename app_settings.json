@@ -1,85 +1,216 @@
 {
-  "forms": {},
-  "schedules": [],
-  "contact_summary": "var ContactSummary = {}; !function(e,t){if('object'==typeof exports&&'object'==typeof module)module.exports=t();else if('function'==typeof define&&define.amd)define([],t);else{var n=t();for(var r in n)('object'==typeof exports?exports:e)[r]=n[r]}}(ContactSummary,(function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){'undefined'!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:'Module'}),Object.defineProperty(e,'__esModule',{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&'object'==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,'default',{enumerable:!0,value:e}),2&t&&'string'!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,'a',t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p='',n(n.s=0)}([function(e,t,n){var r=n(1),o=n(2);e.exports=o(r,contact,reports)},function(e,t){e.exports={fields:[],cards:[],context:{}}},function(e,t){function n(e){return e?Array.isArray(e)?e:[e]:[]}function r(e,t){switch(typeof e){case'undefined':return!0;case'function':return e(t);default:return e}}function o(e,t,n){if(r(e.appliesIf,n)){var o='function'==typeof e.fields?e.fields(n):e.fields.filter((function(e){return r(e.appliesIf,n)})).map((function(e){var t={};return i(e,t,'label'),i(e,t,'value'),i(e,t,'translate'),i(e,t,'filter'),i(e,t,'width'),i(e,t,'icon'),e.context&&(t.context={},i(e.context,t.context,'count'),i(e.context,t.context,'total')),t}));return e.modifyContext&&e.modifyContext(t,n),{label:e.label,fields:o}}function i(e,t,r){switch(typeof e[r]){case'undefined':return;case'function':t[r]=e[r](n);break;default:t[r]=e[r]}}}e.exports=function(e,t,r){var i=e.fields||[],f=e.context||{},u=e.cards||[],c=t&&('contact'===t.type?t.contact_type:t.type),l={cards:[],fields:i.filter((function(e){var t=n(e.appliesToType),r=t.filter((function(e){return e&&'!'===e.charAt(0)}));if((0===t.length||t.includes(c)||r.length>0&&!r.includes('!'+c))&&(!e.appliesIf||e.appliesIf()))return delete e.appliesToType,delete e.appliesIf,!0}))};return u.forEach((function(e){var t,i,u,a,p=n(e.appliesToType);if(p.includes('report')&&p.length>1)throw new Error('You cannot set appliesToType to an array which includes the type \\'report\\' and another type.');if(p.includes('report'))for(t=0;t<r.length;++t)i=r[t],!(a=i)||a.errors&&a.errors.length||(u=o(e,f,i))&&l.cards.push(u);else{if(!p.includes(c)&&p.length>0)return;(u=o(e,f))&&l.cards.push(u)}})),l.context=f,l}}])})); return ContactSummary;",
-  "tasks": {
-    "rules": "define Target { _id: null, contact: null, deleted: null, type: null, pass: null, date: null, groupBy: null }\ndefine Contact { contact: null, reports: null, tasks: null }\ndefine Task { _id: null, deleted: null, doc: null, contact: null, icon: null, date: null, readyStart: null, readyEnd: null, title: null, fields: null, resolved: null, priority: null, priorityLabel: null, reports: null, actions: null }\nrule GenerateEvents {\n  when { c: Contact } then { !function(t){var e={};function n(i){if(e[i])return e[i].exports;var r=e[i]={i:i,l:!1,exports:{}};return t[i].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=t,n.c=e,n.d=function(t,e,i){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:i})},n.r=function(t){'undefined'!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:'Module'}),Object.defineProperty(t,'__esModule',{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&'object'==typeof t&&t&&t.__esModule)return t;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,'default',{enumerable:!0,value:t}),2&e&&'string'!=typeof t)for(var r in t)n.d(i,r,function(e){return t[e]}.bind(null,r));return i},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,'a',e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p='',n(n.s=2)}([function(t,e){const n=p(Date.now()),i=['pregnancy'],r=['delivery'],o=['pregnancy_home_visit'],a=['pregnancy','pregnancy_home_visit','pregnancy_facility_visit_reminder','pregnancy_danger_sign','pregnancy_danger_sign_follow_up','delivery'];const s=(t,e)=>['fields',...(e||'').split('.')].reduce((t,e)=>{if(void 0!==t)return t[e]},t);function c(t,e){let n;return t.forEach((function(t){e.includes(t.form)&&!t.deleted&&(!n||t.reported_date>n.reported_date)&&(n=t)})),n}function d(t){if(!t)return new Date;const e=t.split(/\\D/),n=new Date(e[0],e[1]-1,e[2]);return function(t){return t instanceof Date&&!isNaN(t)}(n)?n:new Date}function l(t){const e=new Date(t);return e.setHours(0),e.setMinutes(0),e.setSeconds(0),e.setMilliseconds(0),e}function p(t){if('string'==typeof t){if(''===t)return null;t=d(t)}return l(t).getTime()}function u(t,e){const n=l(new Date(t));return n.setDate(n.getDate()+e),n}function f(t){return i.includes(t.form)}function _(t){return o.includes(t.form)}const g=function(t,e){let n;return t.forEach((function(t){e.includes(t.form)&&(!n||t.reported_date>n.reported_date)&&(n=t)})),n},y=function(t){return f(t)&&p(s(t,'lmp_date_8601'))};function m(t,e){return t.reports.filter((function(t){let n=y(e);return n||(n=e.reported_date),_(t)&&t.reported_date>e.reported_date&&t.reported_date<u(n,294)}))}function v(t,e){let n=y(e),i=e.reported_date;return m(t,e).forEach((function(t){const e=function(t){return _(t)&&p(s(t,'lmp_date_8601'))}(t);t.reported_date>i&&''!==e&&e!==n&&(i=t.reported_date,n=e)})),n}t.exports={today:n,MS_IN_DAY:864e5,MAX_DAYS_IN_PREGNANCY:294,addDays:u,isAlive:function(t){return t&&t.contact&&!t.contact.date_of_death},getTimeForMidnight:l,isFormArraySubmittedInWindow:function(t,e,n,i,r){let o=!1,a=0;return t.forEach((function(t){e.includes(t.form)&&t.reported_date>=n&&t.reported_date<=i&&(o=!0,r&&a++)})),r?a>=r:o},isFormArraySubmittedInWindowExcludingThisReport:function(t,e,n,i,r,o){let a=!1,s=0;return t.forEach((function(t){e.includes(t.form)&&t.reported_date>=n&&t.reported_date<=i&&t._id!==r._id&&(a=!0,o&&s++)})),o?s>=o:a},getDateMS:p,getDateISOLocal:d,isDeliveryForm:function(t){return r.includes(t.form)},getMostRecentReport:c,getNewestPregnancyTimestamp:function(t){if(!t.contact)return;const e=c(t.reports,'pregnancy');return e?e.reported_date:0},getNewestDeliveryTimestamp:function(t){if(!t.contact)return;const e=c(t.reports,'delivery');return e?e.reported_date:0},getReportsSubmittedInWindow:function(t,e,n,i,r){const o=[];return t.forEach((function(t){e.includes(t.form)&&t.reported_date>=n&&t.reported_date<=i&&(r&&!r(t)||o.push(t))})),o},countReportsSubmittedInWindow:function(t,e,n,i,r){let o=0;return t.forEach((function(t){e.includes(t.form)&&t.reported_date>=n&&t.reported_date<=i&&(r&&!r(t)||o++)})),o},countANCFacilityVisits:function(t,e){let n=0;const i=m(t,e);return s(e,'anc_visits_hf.anc_visits_hf_past')&&!isNaN(s(e,'anc_visits_hf.anc_visits_hf_past.visited_hf_count'))&&(n+=parseInt(s(e,'anc_visits_hf.anc_visits_hf_past.visited_hf_count'))),n+=i.reduce((function(t,e){const n=s(e,'anc_visits_hf.anc_visits_hf_past');return n?(t+='yes'===n.last_visit_attended&&1,isNaN(n.visited_hf_count)?t:t+('yes'===n.report_other_visits&&parseInt(n.visited_hf_count))):0}),0),n},isFacilityDelivery:function(t,e){return!!t&&(1===arguments.length&&(e=t),'yes'===s(e,'facility_delivery'))},getMostRecentLMPDateForPregnancy:v,getNewestReport:g,getSubsequentPregnancyFollowUps:m,isActivePregnancy:function(t,e){if(!f(e))return!1;const i=(v(t,e)||e.reported_date)>n-254016e5,r=function(t,e,i){return t.reports.filter((function(t){return'delivery'===t.form&&t.reported_date>e.reported_date&&(!i||e.reported_date>=n-864e5*i)}))}(t,e,42).length>0,a=function(t,e){return t.reports.filter((function(t){return f(t)&&t.reported_date>e.reported_date}))}(t,e).length>0;return i&&!r&&!a&&!function(t,e){const n=m(t,e),i=g(n,o);return i&&'abortion'===s(i,'pregnancy_summary.visit_option')}(t,e)&&!function(t,e){const n=m(t,e),i=g(n,o);return i&&'miscarriage'===s(i,'pregnancy_summary.visit_option')}(t,e)},getRecentANCVisitWithEvent:function(t,e,n){const i=m(t,e),r=g(i,o);if(r&&s(r,'pregnancy_summary.visit_option')===n)return r},isPregnancyTaskMuted:function(t){const e=g(t.reports,a);return e&&_(e)&&'clear_all'===s(e,'pregnancy_ended.clear_option')},getField:s}},function(t,e){t.exports=function(t){var e={};!function t(e,n){var i=Object.keys(e);for(var r in i){var o=i[r];switch(typeof e[o]){case'object':t(e[o],n);break;case'function':e[o]=e[o].bind(n)}}}(t,e),e.definition=function t(e){var n=Object.assign({},e),i=Object.keys(n);for(var r in i){var o=i[r];if(Array.isArray(n[o])){n[o]=n[o].slice(0);for(var a=0;a<n[o].length;++a)'object'==typeof n[o][a]&&(n[o][a]=t(n[o][a]))}else'object'==typeof n[o]&&(n[o]=t(n[o]))}return n}(t)}},function(t,e,n){var i=n(3),r=n(4),o=n(5);n(7)(r,c,Utils,Target,emit),o(i,c,Utils,Task,emit),emit('_complete',{_id:!0})},function(t,e,n){const{MAX_DAYS_IN_PREGNANCY:i,DAYS_IN_PNC:r,MS_IN_DAY:o,isFormFromArraySubmittedInWindow:a,isCoveredByUseCase:s,getNewestPregnancyTimestamp:c,getNewestDeliveryTimestamp:d,isHighRiskPregnancy:l,deliveryForms:p,antenatalForms:u,postnatalForms:f,isHomeBirth:_,immunizationMonths:g,immunizationForms:y}=n(0);t.exports=[{name:'pregnancy_danger_sign',icon:'mother-child',title:'task.pregnancy_danger_sign.title',appliesTo:'reports',appliesToType:['P','pregnancy'],appliesIf:function(t,e){return Utils.isFormSubmittedInWindow(t.reports,'F',e.reported_date,Utils.addDate(new Date(e.reported_date),i).getTime())},actions:[{form:'pregnancy_visit'}],events:[{id:'pregnancy-danger-sign',start:0,end:6,dueDate:function(t,e){return new Date(Utils.getMostRecentTimestamp(e.reports,'F'))}}],priority:{level:'high',label:'task.warning.danger_sign'},resolvedIf:function(t,e,n,i){return e.reported_date<d(t)||e.reported_date<c(t)||a(t.reports,'pregnancy_visit',Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'pregnancy_missing_birth',icon:'mother-child',title:'task.pregnancy_missing_birth.title',appliesTo:'reports',appliesToType:['P','pregnancy'],appliesIf:function(t,e){return e.scheduled_tasks},actions:[{form:'delivery'}],events:[{id:'pregnancy-missing-birth',start:1,end:13,dueDate:function(t,e,n){return Utils.addDate(new Date(n.scheduled_tasks[n.scheduled_tasks.length-1].due),7)}}],priority:function(t,e){if(l(t,e))return{level:'high',label:'task.warning.high_risk'}},resolvedIf:function(t,e){return'cleared'===e.scheduled_tasks[e.scheduled_tasks.length-1].state||a(t.reports,p,e.reported_date,e.reported_date+(i+r)*o)}},{name:'pregnancy_missing_visit',icon:'pregnancy-1',title:'task.pregnancy_missing_visit.title',appliesTo:'scheduled_tasks',appliesToType:['P','pregnancy'],appliesIf:function(t,e,n){return n+1<e.scheduled_tasks.length&&(e.scheduled_tasks[n].group!==e.scheduled_tasks[n+1].group||e.scheduled_tasks[n].type!==e.scheduled_tasks[n+1].type)},actions:[{form:'pregnancy_visit'}],events:[{id:'pregnancy-missing-visit',days:7,start:0,end:6}],priority:function(t,e){if(l(t,e))return{level:'high',label:'task.warning.high_risk'}},resolvedIf:function(t,e,n,i){return e.reported_date<c(t)||e.reported_date<d(t)||a(t.reports,u,Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'postnatal_home_birth',icon:'mother-child',title:'task.postnatal_home_birth.title',appliesTo:'reports',appliesToType:['D','delivery'],appliesIf:function(t,e){return s(t.contact,'pnc')&&e.fields&&e.fields.delivery_code&&'F'!==e.fields.delivery_code.toUpperCase()},actions:[{form:'postnatal_visit'}],events:[{id:'postnatal-home-birth',days:0,start:0,end:4}],priority:{level:'high',label:'task.warning.home_birth'},resolvedIf:function(t,e,n,i){return e.reported_date<d(t)||e.reported_date<c(t)||a(t.reports,f,Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'postnatal_danger_sign',icon:'mother-child',title:'task.postnatal_danger_sign.title',appliesTo:'reports',appliesToType:['D','delivery'],appliesIf:function(t,e){return s(t.contact,'pnc')&&Utils.isFormSubmittedInWindow(t.reports,'F',e.reported_date,Utils.addDate(new Date(e.reported_date),r).getTime())},actions:[{form:'postnatal_visit'}],events:[{id:'postnatal-danger-sign',start:0,end:6,dueDate:function(t,e){return new Date(Utils.getMostRecentTimestamp(e.reports,'F'))}}],priority:{level:'high',label:'task.warning.danger_sign'},resolvedIf:function(t,e,n,i){return e.reported_date<d(t)||e.reported_date<c(t)||a(t.reports,'postnatal_visit',Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'postnatal_missing_visit',icon:'mother-child',title:'task.postnatal_missing_visit.title',appliesTo:'scheduled_tasks',appliesToType:['D','delivery'],appliesIf:function(t,e,n){return s(t.contact,'pnc')&&(n+1>=e.scheduled_tasks.length||e.scheduled_tasks[n].group!==e.scheduled_tasks[n+1].group)},priority:function(t,e){if(_(e))return{level:'high',label:'task.warning.home_birth'}},actions:[{form:'postnatal_visit'}],events:[{id:'postnatal-missing-visit',days:1,start:0,end:3}],resolvedIf:function(t,e,n,i,r){return'cleared'===e.scheduled_tasks[r].state||e.reported_date<d(t)||e.reported_date<c(t)||a(t.reports,f,Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'immunization_missing_visit',icon:'immunization',title:'task.immunization_missing_visit.title',appliesTo:'scheduled_tasks',appliesToType:['C','CW','child_health_registration'],appliesIf:function(t,e,n){return s(t.contact,'imm')&&-1!==g.indexOf(e.scheduled_tasks[n].group)},actions:[{form:'immunization_visit'}],events:[{id:'immunization-missing-visit',days:21,start:7,end:13}],resolvedIf:function(t,e,n,i,r){return'cleared'===e.scheduled_tasks[r].state||a(t.reports,y,Utils.addDate(i,-n.days).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'nutrition_followup',icon:'child',title:'task.nutrition_followup.title',appliesTo:'scheduled_tasks',appliesToType:['nutrition_screening'],appliesIf:function(t,e){return s(t.contact,'gmp')&&e.fields.treatment.program&&('OTP'===e.fields.treatment.program||'SFP'===e.fields.treatment.program||'SC'===e.fields.treatment.program)},actions:[{form:'nutrition_followup'}],events:[{id:'nutrition-followup-missing-visit',days:0,start:0,end:3}],resolvedIf:function(t,e,n,i,r){return'cleared'===e.scheduled_tasks[r].state||a(t.reports,['nutrition_followup','CF'],Utils.addDate(i,0).getTime(),Utils.addDate(i,n.end+1).getTime())}},{name:'nutrition_screening',icon:'child',title:'task.nutrition_screening.title',appliesTo:'reports',appliesToType:['G'],appliesIf:function(t,e){var n=e.fields.severity.toString();return'3'===n||'2'===n},actions:[{form:'nutrition_screening'}],events:[{id:'nutrition_screening',days:2,start:2,end:0}],resolvedIf:function(t){return t.reports.some((function(t){return'nutrition_screening'===t.form}))}},{name:'nutrition_screening_missing.severe',icon:'child',title:'task.nutrition_screening_missing.title',appliesTo:'reports',appliesToType:['G'],appliesIf:function(t,e){return'3'===e.fields.severity.toString()},actions:[{form:'nutrition_screening'}],events:[{id:'nutrition_screening',days:7,start:0,end:7}],resolvedIf:function(t){return t.reports.some((function(t){return'nutrition_screening'===t.form}))}},{name:'nutrition_screening_missing.moderate',icon:'child',title:'task.nutrition_screening_missing.title',appliesTo:'reports',appliesToType:['G'],appliesIf:function(t,e){return'2'===e.fields.severity.toString()},actions:[{form:'nutrition_screening'}],events:[{id:'nutrition_screening',days:21,start:0,end:7}],resolvedIf:function(t){return t.reports.some((function(t){return'nutrition_screening'===t.form}))}},{name:'death_confirmation',icon:'icon-death-general',title:'task.death_confirmation.title',appliesTo:'reports',appliesToType:['DR','nutrition_exit'],appliesIf:function(t,e){return'DR'===e.form||'nutrition_exit'===e.form&&'dead'===e.fields.exit.outcome},actions:[{form:'death_confirmation'}],events:[{id:'death-confirmation',days:2,start:2,end:7}],resolvedIf:function(t){return t.reports.some((function(t){return'death_confirmation'===t.form&&'yes'===t.fields.death_report.death}))}},{name:'nutrition_exit',icon:'child',title:'task.nutrition_exit.title',appliesTo:'reports',appliesToType:['nutrition_followup'],appliesIf:function(t,e){return'yes'===e.fields.measurements.exit},actions:[{form:'nutrition_exit'}],events:[{id:'nutrition-exit',days:2,start:2,end:7}],resolvedIf:function(t){return t.reports.some((function(t){return'nutrition_exit'===t.form}))}}]},function(t,e,n){const i=n(0),{isAlive:r,getSubsequentPregnancyFollowUps:o,getMostRecentLMPDateForPregnancy:a,isActivePregnancy:s,countANCFacilityVisits:c,getField:d}=i;t.exports=[{id:'deaths-this-month',type:'count',icon:'icon-death-general',goal:0,translation_key:'targets.death_reporting.deaths.title',subtitle_translation_key:'targets.this_month.subtitle',appliesTo:'contacts',appliesToType:['person'],appliesIf:function(t){return!r(t)},date:t=>t.contact.date_of_death},{id:'pregnancy-registrations-this-month',type:'count',icon:'icon-pregnancy',goal:20,translation_key:'targets.anc.new_pregnancy_registrations.title',subtitle_translation_key:'targets.this_month.subtitle',appliesTo:'reports',appliesToType:['pregnancy'],appliesIf:function(t,e){return!!e&&a(t,e)},date:'reported',idType:'contact'},{id:'births-this-month',type:'count',icon:'icon-infant',goal:-1,translation_key:'targets.births.title',subtitle_translation_key:'targets.this_month.subtitle',appliesTo:'contacts',appliesToType:['person'],appliesIf:function(t){return t&&t.contact&&t.contact.date_of_birth},date:t=>t.contact.date_of_birth,dhis:{dataElement:'kB0ZBFisE0e'}},{id:'active-pregnancies',type:'count',icon:'icon-pregnancy',goal:-1,translation_key:'targets.anc.active_pregnancies.title',subtitle_translation_key:'targets.all_time.subtitle',appliesTo:'reports',appliesToType:['pregnancy'],appliesIf:function(t,e){return s(t,e)},date:'now',idType:'contact'},{id:'active-pregnancies-1+-visits',type:'count',icon:'icon-clinic',goal:-1,translation_key:'targets.anc.active_pregnancies_1p_visits.title',subtitle_translation_key:'targets.all_time.subtitle',appliesTo:'reports',appliesToType:['pregnancy'],appliesIf:function(t,e){if(!s(t,e))return!1;return c(t,e)>0},date:'now',idType:'contact'},{id:'facility-deliveries',type:'percent',icon:'icon-mother-child',goal:-1,translation_key:'targets.anc.facility_deliveries.title',subtitle_translation_key:'targets.all_time.subtitle',appliesTo:'reports',appliesToType:['delivery'],appliesIf:function(t,e){return d(e,'delivery_outcome.delivery_place')},passesIf:function(t,e){return'health_facility'===d(e,'delivery_outcome.delivery_place')},date:'now',idType:'contact',dhis:{dataElement:'e22tIwy1nKR',categoryOptionCombo:'HllvX50cXC0',attributeOptionCombo:'HllvX50cXC0'}},{id:'active-pregnancies-4+-visits',type:'count',icon:'icon-clinic',goal:-1,translation_key:'targets.anc.active_pregnancies_4p_visits.title',subtitle_translation_key:'targets.all_time.subtitle',appliesTo:'reports',appliesToType:['pregnancy'],appliesIf:function(t,e){if(!s(t,e))return!1;return c(t,e)>3},date:'now',idType:'contact'},{id:'active-pregnancies-8+-contacts',type:'count',icon:'icon-follow-up',goal:-1,translation_key:'targets.anc.active_pregnancies_8p_contacts.title',subtitle_translation_key:'targets.all_time.subtitle',appliesTo:'reports',appliesToType:['pregnancy'],appliesIf:function(t,e){if(!s(t,e))return!1;return 1+(o(t,e).length||0)+(c(t,e)||0)>7},date:'now',idType:'contact'}]},function(t,e,n){var i=n(1),r=n(6);function o(t,e,n,i,r,o){var a;if(t.appliesToType){var s;if('contacts'===t.appliesTo){if(!r.contact)return;s='contact'===r.contact.type?r.contact.contact_type:r.contact.type}else{if(!o)return;s=o.form}if(-1===t.appliesToType.indexOf(s))return}if('scheduled_tasks'===t.appliesTo||!t.appliesIf||t.appliesIf(r,o))if('scheduled_tasks'===t.appliesTo){if(o&&t.appliesIf){if(!o.scheduled_tasks)return;for(a=0;a<o.scheduled_tasks.length;a++)t.appliesIf(r,o,a)&&d(a)}}else d();function c(t,e,n){var i;return(i='function'==typeof t.contactLabel?t.contactLabel(e,n):t.contactLabel)?{name:i}:e.contact}function d(a){var s,d,p,u,f=null;for(s=0;s<t.events.length;s++){if((d=t.events[s]).dueDate)f=d.dueDate(d,r,o,a);else if(o)f=void 0!==a?new Date(e.addDate(new Date(o.scheduled_tasks[a].due),d.days)):new Date(e.addDate(new Date(o.reported_date),d.days));else if(d.dueDate)f=d.dueDate(d,r);else{var _=r.contact&&r.contact.reported_date?new Date(r.contact.reported_date):new Date;f=new Date(e.addDate(_,d.days))}e.isTimely(f,d)&&(u={_id:(o?o._id:r.contact&&r.contact._id)+'~'+(d.id||s)+'~'+t.name,deleted:!(!(r.contact&&r.contact.deleted||o)||!o.deleted),doc:r,contact:c(t,r,o),icon:t.icon,date:f,readyStart:d.start||0,readyEnd:d.end||0,title:t.title,resolved:t.resolvedIf(r,o,d,f,a),actions:l(t.actions,d)},void 0!==a&&(u._id+='-'+a),'function'==typeof(p=t.priority)&&(p=p(r,o)),p&&(u.priority=p.level,u.priorityLabel=p.label),i('task',new n(u)))}}function l(e,n){return t.actions.map((function(t){return function(t,e){var n={source:'task',source_id:o?o._id:r.contact&&r.contact._id,contact:r.contact};t.modifyContent&&t.modifyContent(n,r,o,e);return{type:t.type||'report',form:t.form,label:t.label||'Follow up',content:n}}(t,n)}))}}t.exports=function(t,e,n,a,s){if(t)for(var c,d,l=0;l<t.length;++l)switch('function'!=typeof(c=Object.assign({},t[l],r)).resolvedIf&&(c.resolvedIf=function(t,e,i,r){return c.defaultResolvedIf(t,e,i,r,n)}),i(c),c.appliesTo){case'reports':case'scheduled_tasks':for(var p=0;p<e.reports.length;++p)d=e.reports[p],o(c,n,a,s,e,d);break;case'contacts':e.contact&&o(c,n,a,s,e);break;default:throw new Error('Unrecognised task.appliesTo: '+c.appliesTo)}}},function(t,e){t.exports={defaultResolvedIf:function(t,e,n,i,r){var o,a;r||(r=Utils);var s=function(t){var e;if(!t||!t.actions)return;return(e=t.actions.find((function(t){return!t.type||'report'===t.type})))&&e.form}(this.definition);if(!s)throw new Error('Could not find the default resolving form!');return o=0,o=e?Math.max(r.addDate(i,-n.start).getTime(),e.reported_date+1):r.addDate(i,-n.start).getTime(),a=r.addDate(i,n.end+1).getTime(),r.isFormSubmittedInWindow(t.reports,s,o,a)}}},function(t,e,n){var i=n(1);function r(t,e,n,i,r,o){var a=!!o;if(r.contact){var s='contact'===r.contact.type?r.contact.contact_type:r.contact.type,c=a?o.form:s;if(!(t.appliesToType&&t.appliesToType.indexOf(c)<0)&&(!t.appliesIf||t.appliesIf(r,o)))for(var d=a?o:r.contact,l=function(t,e,n){var i;return i='function'==typeof t.idType?t.idType(e,n):'report'===t.idType?n&&n._id:e.contact&&e.contact._id,Array.isArray(i)||(i=[i]),i}(t,r,o),p=!t.passesIf||!!t.passesIf(r,o),u=function(t,e,n,i){if('function'==typeof t.date)return t.date(n,i)||e.now().getTime();if(void 0===t.date||null===t.date||'now'===t.date)return e.now().getTime();if('reported'===t.date)return i?i.reported_date:n.contact.reported_date;throw new Error('Unrecognised value for target.date: '+t.date)}(t,n,r,o),f=t.groupBy&&t.groupBy(r,o),_=0;_<l.length;++_){var g=new e({_id:l[_]+'~'+t.id,contact:r.contact,deleted:!!d.deleted,type:t.id,pass:p,groupBy:f,date:u});t.emitCustom?t.emitCustom(y,g,r,o):y(g)}}function y(t){i('target',t)}}t.exports=function(t,e,n,o,a){for(var s=0;s<t.length;++s){var c=t[s];switch(i(c),c.appliesTo){case'contacts':r(c,o,n,a,e);break;case'reports':for(var d=0;d<e.reports.length;++d){r(c,o,n,a,e,e.reports[d])}break;default:throw new Error('Unrecognised target.appliesTo: '+c.appliesTo)}}}}]); }\n}",
-    "targets": {
-      "enabled": true,
-      "items": [
-        {
-          "id": "deaths-this-month",
-          "type": "count",
-          "goal": 0,
-          "translation_key": "targets.death_reporting.deaths.title",
-          "icon": "icon-death-general",
-          "subtitle_translation_key": "targets.this_month.subtitle"
-        },
-        {
-          "id": "pregnancy-registrations-this-month",
-          "type": "count",
-          "goal": 20,
-          "translation_key": "targets.anc.new_pregnancy_registrations.title",
-          "icon": "icon-pregnancy",
-          "subtitle_translation_key": "targets.this_month.subtitle"
-        },
-        {
-          "id": "births-this-month",
-          "type": "count",
-          "goal": -1,
-          "translation_key": "targets.births.title",
-          "icon": "icon-infant",
-          "subtitle_translation_key": "targets.this_month.subtitle",
-          "dhis": {
-            "dataElement": "kB0ZBFisE0e"
-          }
-        },
-        {
-          "id": "active-pregnancies",
-          "type": "count",
-          "goal": -1,
-          "translation_key": "targets.anc.active_pregnancies.title",
-          "icon": "icon-pregnancy",
-          "subtitle_translation_key": "targets.all_time.subtitle"
-        },
-        {
-          "id": "active-pregnancies-1+-visits",
-          "type": "count",
-          "goal": -1,
-          "translation_key": "targets.anc.active_pregnancies_1p_visits.title",
-          "icon": "icon-clinic",
-          "subtitle_translation_key": "targets.all_time.subtitle"
-        },
-        {
-          "id": "facility-deliveries",
-          "type": "percent",
-          "goal": -1,
-          "translation_key": "targets.anc.facility_deliveries.title",
-          "icon": "icon-mother-child",
-          "subtitle_translation_key": "targets.all_time.subtitle",
-          "dhis": {
-            "dataElement": "e22tIwy1nKR",
-            "categoryOptionCombo": "HllvX50cXC0",
-            "attributeOptionCombo": "HllvX50cXC0"
-          }
-        },
-        {
-          "id": "active-pregnancies-4+-visits",
-          "type": "count",
-          "goal": -1,
-          "translation_key": "targets.anc.active_pregnancies_4p_visits.title",
-          "icon": "icon-clinic",
-          "subtitle_translation_key": "targets.all_time.subtitle"
-        },
-        {
-          "id": "active-pregnancies-8+-contacts",
-          "type": "count",
-          "goal": -1,
-          "translation_key": "targets.anc.active_pregnancies_8p_contacts.title",
-          "icon": "icon-follow-up",
-          "subtitle_translation_key": "targets.all_time.subtitle"
-        }
-      ]
+  "locales": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "sw",
+      "name": "Kiswahili (Swahili)"
     }
-  }
+  ],
+  "locale": "en",
+  "locale_outgoing": "en",
+  "date_format": "D MMM, YYYY",
+  "reported_date_format": "DD-MMM-YYYY HH:mm:ss",
+  "roles": {
+    "data_entry": {
+      "name": "usertype.data-entry"
+    },
+    "DSO":{
+        "name":"Disease-surveillance-officer"
+    },
+    "facility_Dsteam":{
+      "name":"Facility disease surveillance team"
+  },
+
+
+    "analytics": {
+      "name": "usertype.analytics"
+    },
+    "gateway": {
+      "name": "usertype.gateway"
+    },
+    "program_officer": {
+      "name": "usertype.program-officer"
+    },
+    "crfo": {
+      "name": "usertype.crfo"
+    },
+    "chp_supervisor": {
+      "name": "usertype.chp-supervisor",
+      "offline": true
+    },
+    "chp": {
+      "name": "usertype.chp",
+      "offline": true
+    }
+  },
+  "permissions": {
+    "can_access_gateway_api": ["gateway"],
+    "can_bulk_delete_reports": ["program_officer", "chp_supervisor", "chp"],
+    "can_configure": ["program_officer", "crfo"],
+    "can_create_people": ["program_officer", "chp_supervisor", "chp"],
+    "can_create_places": ["program_officer", "chp_supervisor", "chp"],
+    "can_create_records": [
+      "data_entry",
+      "gateway",
+      "program_officer",
+      "chp_supervisor",
+      "chp"
+    ],
+    "can_create_users": ["program_officer"],
+    "can_delete_contacts": ["program_officer", "chp_supervisor", "chp"],
+    "can_delete_messages": ["program_officer", "chp_supervisor", "chp"],
+    "can_delete_reports": ["program_officer", "chp_supervisor", "chp"],
+    "can_delete_users": ["program_officer"],
+    "can_edit": ["gateway", "program_officer", "chp_supervisor", "chp"],
+    "can_edit_profile": ["program_officer", "chp_supervisor", "chp"],
+    "can_edit_verification": ["program_officer", "chp_supervisor", "chp"],
+    "can_export_all": ["program_officer", "crfo"],
+    "can_export_contacts": ["program_officer", "chp_supervisor", "chp"],
+    "can_export_feedback": ["program_officer"],
+    "can_export_messages": [
+      "analytics",
+      "program_officer",
+      "disease_surveillance_officer",
+      "chp_supervisor",
+      "chp"
+    ],
+    "can_log_out_on_android": [],
+    "can_update_places": ["program_officer", "chp_supervisor", "chp"],
+    "can_update_reports": ["program_officer", "chp_supervisor", "chp"],
+    "can_update_users": ["program_officer"],
+    "can_export_dhis": ["national_admin", "crfo"],
+    "can_verify_reports": ["program_officer", "chw_supervisor", "chw"],
+    "can_view_analytics": [
+      "analytics",
+      "program_officer",
+      "chp_supervisor",
+      "chp"
+    ],
+    "can_view_analytics_tab": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_call_action": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_contacts": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_contacts_tab": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_last_visited_date": [],
+    "can_view_uhc_stats": [],
+    "can_view_message_action": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_messages": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_messages_tab": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_outgoing_messages": ["program_officer"],
+    "can_view_reports": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_reports_tab": ["program_officer", "chp_supervisor", "chp"],
+    "can_view_tasks": ["chp_supervisor", "chp"],
+    "can_view_tasks_tab": ["chp_supervisor", "chp"],
+    "can_view_tasks_group": ["chp"],
+    "can_view_unallocated_data_records": [
+      "gateway",
+      "program_officer",
+      "chp_supervisor",
+      "chp"
+    ],
+    "can_view_users": ["program_officer"],
+    "can_write_wealth_quintiles": [],
+    "can_aggregate_targets": ["chw_supervisor"],
+    "can_upgrade": ["program_officer"],
+    "can_view_old_filter_and_search": [],
+    "can_view_old_action_bar": []
+  },
+  "contact_types": [
+    {
+      "id": "area_health_facility",
+      "icon": "area-health-facility",
+      "name_key": "contact.type.area_health_facility",
+      "group_key": "contact.type.area_health_facility.plural",
+      "create_key": "contact.type.area_health_facility.new",
+      "edit_key": "contact.type.area_health_facility.edit",
+      "create_form": "form:contact:area_health_facility:create",
+      "edit_form": "form:contact:area_health_facility:edit"
+    },
+    {
+      "id": "area_health_facility_nurse",
+      "icon": "area-health-facility-nurse",
+      "name_key": "contact.type.area_health_facility_nurse",
+      "group_key": "contact.type.area_health_facility_nurse.plural",
+      "create_key": "contact.type.area_health_facility_nurse.new",
+      "edit_key": "contact.type.area_health_facility_nurse.edit",
+      "parents": ["area_health_facility"],
+      "create_form": "form:contact:area_health_facility_nurse:create",
+      "edit_form": "form:contact:area_health_facility_nurse:edit",
+      "person": true
+    },
+    {
+      "id": "area_supervisor_region",
+      "icon": "area-supervisor-region",
+      "name_key": "contact.type.area_supervisor_region",
+      "group_key": "contact.type.area_supervisor_region.plural",
+      "create_key": "contact.type.area_supervisor_region.new",
+      "edit_key": "contact.type.area_supervisor_region.edit",
+      "parents": ["area_health_facility"],
+      "create_form": "form:contact:area_supervisor_region:create",
+      "edit_form": "form:contact:area_supervisor_region:edit"
+    },
+    {
+      "id": "area_community_health_supervisor",
+      "icon": "area-community-health-supervisor",
+      "name_key": "contact.type.area_community_health_supervisor",
+      "group_key": "contact.type.area_community_health_supervisor.plural",
+      "create_key": "contact.type.area_community_health_supervisor.new",
+      "edit_key": "contact.type.area_community_health_supervisor.edit",
+      "parents": ["area_supervisor_region"],
+      "create_form": "form:contact:area_community_health_supervisor:create",
+      "edit_form": "form:contact:area_community_health_supervisor:edit",
+      "person": true
+    },
+    {
+      "id": "community_health_area",
+      "icon": "community-health-area",
+      "name_key": "contact.type.community_health_area",
+      "group_key": "contact.type.community_health_area.plural",
+      "create_key": "contact.type.community_health_area.new",
+      "edit_key": "contact.type.community_health_area.edit",
+      "create_form": "form:contact:community_health_area:create",
+      "parents": ["area_supervisor_region"],
+      "edit_form": "form:contact:community_health_area:edit"
+    },
+    {
+      "id": "community_health_volunteer",
+      "icon": "community-health-volunteer",
+      "name_key": "contact.type.community_health_volunteer",
+      "group_key": "contact.type.community_health_volunteer.plural",
+      "create_key": "contact.type.community_health_volunteer.new",
+      "edit_key": "contact.type.community_health_volunteer.edit",
+      "parents": ["community_health_area"],
+      "create_form": "form:contact:community_health_volunteer:create",
+      "edit_form": "form:contact:community_health_volunteer:edit",
+      "person": true
+    },
+    {
+      "id": "household",
+      "icon": "icon-people-family",
+      "name_key": "contact.type.household",
+      "group_key": "contact.type.household.plural",
+      "create_key": "contact.type.household.new",
+      "edit_key": "contact.type.household.edit",
+      "parents": ["community_health_area"],
+      "create_form": "form:contact:household:create",
+      "edit_form": "form:contact:household:edit"
+    },
+    {
+      "id": "household_member",
+      "icon": "household-member",
+      "name_key": "contact.type.household_member",
+      "group_key": "contact.type.household_member.plural",
+      "create_key": "contact.type.household_member.new",
+      "edit_key": "contact.type.household_member.edit",
+      "parents": ["household"],
+      "create_form": "form:contact:household_member:create",
+      "edit_form": "form:contact:household_member:edit",
+      "person": true
+    }
+  ]
+  
+  
+  
 }

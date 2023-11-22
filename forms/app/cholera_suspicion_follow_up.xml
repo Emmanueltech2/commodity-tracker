@@ -6,7 +6,7 @@
       <itext>
         <translation lang="en">
           <text id="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note:label">
-            <value>Great news! Please continue to closely monitor the patient.</value>
+            <value>&lt;p style="color:green;"&gt;Great news! Please continue to closely monitor the patient.&lt;/p&gt;</value>
           </text>
           <text id="/cholera_suspicion_follow_up/danger_signs/danger_sign_present/no:label">
             <value>No</value>
@@ -20,59 +20,11 @@
           <text id="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note:label">
             <value>Please confirm if the patient has any of the following danger signs.</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dehydration/no:label">
-            <value>No</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/reason:hint">
+            <value>Reason for not reporting to the hospital</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dehydration/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dehydration:label">
-            <value>Dehydration</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/diarrhoea/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/diarrhoea/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/diarrhoea:label">
-            <value>Profuse watery diarrhea</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding:label">
-            <value>Lack of appetite</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dry_skin/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dry_skin/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/dry_skin:label">
-            <value>Dry Skin</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/fever/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/fever/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/fever:label">
-            <value>Fever</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/leg_cramps/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/leg_cramps/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/leg_cramps:label">
-            <value>Leg cramps</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/reason:label">
+            <value>Why?</value>
           </text>
           <text id="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_1:label">
             <value>The patient should be taken to the health facility immediately if experiencing any of these danger signs.</value>
@@ -80,23 +32,32 @@
           <text id="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2:label">
             <value>Please advise the caregiver to do so and accompany them if possible.</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/restlessness/no:label">
-            <value>No</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/body_restlessnes:label">
+            <value>Body restlessness</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/restlessness/yes:label">
-            <value>Yes</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/dehydration:label">
+            <value>Dehydration</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/restlessness:label">
-            <value>Body restlessnessness</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/dry_skin:label">
+            <value>Dry skin</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/thirst/no:label">
-            <value>No</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/fever:label">
+            <value>Fever</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/thirst/yes:label">
-            <value>Yes</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/lack_of_appetite:label">
+            <value>Lack of appetite</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/thirst:label">
-            <value>Thirstiness</value>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/leg_cramps:label">
+            <value>Leg cramps</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/profuse_watery_diarrhea:label">
+            <value>Profuse watery diarrhea</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs/vomits_everything:label">
+            <value>Vomits everything</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/danger_signs/signs:label">
+            <value>Choose any of this danger signs</value>
           </text>
           <text id="/cholera_suspicion_follow_up/danger_signs/visit_confirm/no:label">
             <value>No</value>
@@ -107,17 +68,35 @@
           <text id="/cholera_suspicion_follow_up/danger_signs/visit_confirm:label">
             <value>Was the patient taken to the health facility as recommended?</value>
           </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/vomit/no:label">
-            <value>No</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/vomit/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/cholera_suspicion_follow_up/danger_signs/vomit:label">
-            <value>Vomits everything</value>
-          </text>
           <text id="/cholera_suspicion_follow_up/danger_signs:label">
             <value>Cholera Follow Up Form</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/advise:label">
+            <value>The client is doing well, encourage them to continue watching on hygiene and sanitation.</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/age_of_patient:label">
+            <value><output value=" /cholera_suspicion_follow_up/patient_age_in_years "/> &lt;span&gt;years old&lt;/span&gt;</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/all_patient_details:label">
+            <value>Patient Details&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/complete_action:label">
+            <value>Be sure you submit to complete this action</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/facility_recommendation:label">
+            <value>Alert &lt;i class="fa fa-warning" aria-hidden="true"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/name_of_patient:label">
+            <value><output value=" /cholera_suspicion_follow_up/patient_name "/></value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/recommend:label">
+            <value>Please recommend <output value=" /cholera_suspicion_follow_up/patient_name "/> to health facility immediately &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/summary_name:label">
+            <value>Cholera Follow – up summary&lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/cholera_suspicion_follow_up/group_review/todo_task:label">
+            <value>Fill Referral Form for the Patient</value>
           </text>
           <text id="/cholera_suspicion_follow_up/inputs/contact/_id:label">
             <value>What is the patient's name?</value>
@@ -158,7 +137,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_suspicion_follow_up id="cholera_follow_up" prefix="J1!cholera_follow_up!" delimiter="#" version="2023-11-15 18:51:00">
+        <cholera_suspicion_follow_up id="cholera_follow_up" prefix="J1!cholera_follow_up!" delimiter="#" version="2023-11-22 17:16:15">
           <inputs>
             <meta>
               <location>
@@ -193,48 +172,27 @@
           <patient_uuid tag="hidden"/>
           <patient_id tag="hidden"/>
           <patient_name tag="hidden"/>
-          <t_danger_signs_referral_follow_up_date tag="hidden"/>
-          <t_danger_signs_referral_follow_up tag="hidden"/>
           <danger_signs>
             <visit_confirm/>
+            <reason/>
             <danger_sign_present/>
             <danger_signs_question_note tag="hidden"/>
-            <diarrhoea/>
-            <dehydration/>
-            <difficulty_feeding/>
-            <vomit/>
-            <thirst/>
-            <restlessness/>
-            <leg_cramps/>
-            <fever/>
-            <dry_skin/>
-            <r_danger_sign_present tag="hidden"/>
+            <signs/>
             <congratulate_no_ds_note tag="hidden"/>
             <refer_patient_note_1 tag="hidden"/>
             <refer_patient_note_2 tag="hidden"/>
           </danger_signs>
-          <data tag="hidden">
-            <__visited_hf/>
-            <__still_experiencing_danger_sign/>
-            <__diarrhoea/>
-            <__dehydration/>
-            <__difficulty_feeding_or_drinking/>
-            <__vomits_everything/>
-            <__thirst_or_unconscious/>
-            <__body_restlessnessness/>
-            <__leg_cramps_color/>
-            <__fever/>
-            <__dry_skin_color/>
-            <__has_danger_sign/>
-            <meta tag="hidden">
-              <__patient_uuid/>
-              <__patient_id/>
-              <__household_uuid/>
-              <__source/>
-              <__source_id/>
-              <__delivery_uuid/>
-            </meta>
-          </data>
+          <group_review>
+            <summary_name/>
+            <complete_action/>
+            <all_patient_details/>
+            <name_of_patient/>
+            <age_of_patient/>
+            <advise/>
+            <facility_recommendation/>
+            <recommend/>
+            <todo_task/>
+          </group_review>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -258,59 +216,24 @@
       <bind nodeset="/cholera_suspicion_follow_up/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/cholera_suspicion_follow_up/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
       <bind nodeset="/cholera_suspicion_follow_up/patient_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/cholera_suspicion_follow_up/t_danger_signs_referral_follow_up_date" type="string" calculate="date-time(decimal-date-time(today()) + 3)"/>
-      <bind nodeset="/cholera_suspicion_follow_up/t_danger_signs_referral_follow_up" type="string" calculate="../danger_signs/r_danger_sign_present"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/visit_confirm" type="select1" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/reason" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/visit_confirm  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_sign_present" type="select1" required="true()"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/diarrhoea" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/dehydration" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/vomit" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/thirst" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/restlessness" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/leg_cramps" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/fever" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/dry_skin" type="select1" required="true()" relevant="../danger_sign_present = 'yes' or ../danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/r_danger_sign_present" type="string" calculate="if(selected(../diarrhoea, 'yes') or
-selected(../dehydration, 'yes') or
-selected(../difficulty_feeding, 'yes') or
-selected(../vomit, 'yes') or
-selected(../thirst, 'yes') or
-selected(../restlessness, 'yes') or
-selected(../leg_cramps, 'yes') or
-selected(../fever, 'yes') or
-selected(../dry_skin, 'yes'), 'yes', 
-if(selected(../diarrhoea, 'no') and
-selected(../dehydration, 'no') and
-selected(../difficulty_feeding, 'no') and
-selected(../vomit, 'no') and
-selected(../thirst, 'no') and
-selected(../restlessness, 'no') and
-selected(../leg_cramps, 'no') and
-selected(../fever, 'no') and
-selected(../dry_skin, 'no'), 'no', ''))"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant="../danger_sign_present = 'no' and ../r_danger_sign_present = 'no'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_1" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2" readonly="true()" type="string" relevant="../danger_sign_present = 'yes' or ../r_danger_sign_present = 'yes'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__visited_hf" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/visit_confirm "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__still_experiencing_danger_sign" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__diarrhoea" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/diarrhoea "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__dehydration" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/dehydration "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__difficulty_feeding_or_drinking" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/difficulty_feeding "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__vomits_everything" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/vomit "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__thirst_or_unconscious" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/thirst "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__body_restlessnessness" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/restlessness "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__leg_cramps_color" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/leg_cramps "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__fever" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/fever "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__dry_skin_color" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/dry_skin "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/__has_danger_sign" type="string" calculate=" /cholera_suspicion_follow_up/danger_signs/r_danger_sign_present "/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__patient_uuid" type="string" calculate="../../../inputs/contact/_id"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__patient_id" type="string" calculate="../../../inputs/contact/patient_id"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__household_uuid" type="string" calculate="../../../inputs/contact/parent/_id"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__source" type="string" calculate="../../../inputs/source"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__source_id" type="string" calculate="../../../inputs/source_id"/>
-      <bind nodeset="/cholera_suspicion_follow_up/data/meta/__delivery_uuid" type="string" calculate="../../../inputs/delivery_uuid"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/signs" type="select" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_1" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review" constraint="hidden"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/summary_name" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/complete_action" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/all_patient_details" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/name_of_patient" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/age_of_patient" readonly="true()" type="string"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/advise" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/facility_recommendation" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/recommend" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
+      <bind nodeset="/cholera_suspicion_follow_up/group_review/todo_task" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -340,6 +263,10 @@ selected(../dry_skin, 'no'), 'no', ''))"/>
           <value>no</value>
         </item>
       </select1>
+      <input ref="/cholera_suspicion_follow_up/danger_signs/reason">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/reason:label')"/>
+        <hint ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/reason:hint')"/>
+      </input>
       <select1 ref="/cholera_suspicion_follow_up/danger_signs/danger_sign_present">
         <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/danger_sign_present:label')"/>
         <item>
@@ -354,105 +281,41 @@ selected(../dry_skin, 'no'), 'no', ''))"/>
       <input ref="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note">
         <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note:label')"/>
       </input>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/diarrhoea">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/diarrhoea:label')"/>
+      <select ref="/cholera_suspicion_follow_up/danger_signs/signs">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs:label')"/>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/diarrhoea/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/profuse_watery_diarrhea:label')"/>
+          <value>profuse_watery_diarrhea</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/diarrhoea/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/dehydration">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dehydration:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dehydration/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/dehydration:label')"/>
+          <value>dehydration</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dehydration/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/difficulty_feeding">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/difficulty_feeding:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/difficulty_feeding/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/lack_of_appetite:label')"/>
+          <value>lack_of_appetite</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/difficulty_feeding/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/vomit">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/vomit:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/vomit/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/vomits_everything:label')"/>
+          <value>vomits_everything</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/vomit/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/thirst">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/thirst:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/thirst/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/body_restlessnes:label')"/>
+          <value>body_restlessnes</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/thirst/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/restlessness">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/restlessness:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/restlessness/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/leg_cramps:label')"/>
+          <value>leg_cramps</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/restlessness/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/leg_cramps">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/leg_cramps:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/leg_cramps/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/dry_skin:label')"/>
+          <value>dry_skin</value>
         </item>
         <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/leg_cramps/no:label')"/>
-          <value>no</value>
+          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/signs/fever:label')"/>
+          <value>fever</value>
         </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/fever">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/fever:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/fever/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/fever/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/cholera_suspicion_follow_up/danger_signs/dry_skin">
-        <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dry_skin:label')"/>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dry_skin/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/dry_skin/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
+      </select>
       <input ref="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note">
         <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note:label')"/>
       </input>
@@ -463,8 +326,34 @@ selected(../dry_skin, 'no'), 'no', ''))"/>
         <label ref="jr:itext('/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2:label')"/>
       </input>
     </group>
-    <group appearance="hidden" ref="/cholera_suspicion_follow_up/data">
-      <group ref="/cholera_suspicion_follow_up/data/meta"/>
+    <group appearance="field-list summary" ref="/cholera_suspicion_follow_up/group_review">
+      <input appearance="h1 yellow" ref="/cholera_suspicion_follow_up/group_review/summary_name">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/summary_name:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/complete_action">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/complete_action:label')"/>
+      </input>
+      <input appearance="h1 blue" ref="/cholera_suspicion_follow_up/group_review/all_patient_details">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/all_patient_details:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/name_of_patient">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/name_of_patient:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/age_of_patient">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/age_of_patient:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/cholera_suspicion_follow_up/group_review/advise">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/advise:label')"/>
+      </input>
+      <input appearance="h1 red" ref="/cholera_suspicion_follow_up/group_review/facility_recommendation">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/facility_recommendation:label')"/>
+      </input>
+      <input ref="/cholera_suspicion_follow_up/group_review/recommend">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/recommend:label')"/>
+      </input>
+      <input ref="/cholera_suspicion_follow_up/group_review/todo_task">
+        <label ref="jr:itext('/cholera_suspicion_follow_up/group_review/todo_task:label')"/>
+      </input>
     </group>
   </h:body>
 </h:html>

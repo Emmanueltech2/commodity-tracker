@@ -1,8 +1,0 @@
-{
-    "icon": "icon-outbreak",
-    "title": "Suspicion Form",
-    "context": {
-        "person": false,
-        "place": false
-    }
-}
