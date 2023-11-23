@@ -1,0 +1,8 @@
+{
+
+  "context": {
+    "place": false,
+    "person": false,
+    "expression": "!contact.date_of_death && !summary.muted && ageInYears(contact) > 0"
+  }
+}
