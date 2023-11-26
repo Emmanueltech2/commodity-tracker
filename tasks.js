@@ -10,7 +10,6 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['household_member_assessment'],
     appliesIf: function(contact, report){
-        console.log('report', report);
         let userHasDangerSigns = getField(report, 'household_member_assessment.initial_symptoms') === 'yes';
         return userHasDangerSigns;
     },
