@@ -17,7 +17,7 @@ module.exports = [
     actions: [{form: 'cholera_follow_up'}],
     events: [{
         start: 3,
-        end: 1,
+        end: 3,
         dueDate: function(event, contact, report){
             return new Date(report.reported_date + (event.start * 24 * 60 * 60 * 1000));
         }
