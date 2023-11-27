@@ -5,7 +5,8 @@ const {
 module.exports = [
     {
         id: 'follow_up_household_member_target',
-        translation_key:'tasks.follow_up_household_member_target',
+        translation_key:'target.follow_up_household_member',
+        subtitle_translation_key: 'target.follow_up_household_member.subtitle',
         icon: 'icon-healthcare-assessment',
         type: 'count',
         goal: 100,
@@ -19,4 +20,19 @@ module.exports = [
         date: 'reported',
 
     },
+    {
+        id: 'register_households_target',
+        translation_key:'target.register_households',
+        subtitle_translation_key: 'target.register_households.subtitle',
+        icon: 'icon-register-household',
+        type: 'count',
+        goal: 50,
+        appliesTo: 'contacts',
+        appliesToType: ['household'],
+        appliesIf: function(contact){
+            let isHouseHoldType = contact.contact.contact_type === 'household';
+            return isHouseHoldType;
+        },
+        date: 'now'
+    }
 ];
