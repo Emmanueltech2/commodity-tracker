@@ -55,11 +55,11 @@ module.exports = [
         translation_key:'target.referrals_honored',
         subtitle_translation_key: 'target.referrals_honored.subtitle',
         icon: 'icon-referral',
-        type: 'count',
-        goal: 20,
+        type: 'percent',
+        goal: 80,
         appliesTo: 'reports',
         appliesToType: ['cholera_follow_up'],
-        appliesIf: function(contact, report){
+        passesIf: function(contact, report){
             let visitedFacility = getField(report, 'danger_signs.visit_confirm');
             return visitedFacility === 'yes';
         },
