@@ -16,7 +16,8 @@ module.exports = [
             let isHouseHoldType = contact.contact.contact_type === 'household';
             return isHouseHoldType;
         },
-        date: 'now'
+        date: 'now',
+        aggregate: true
     },
     {
         id: 'follow_up_household_member_target',
@@ -33,7 +34,7 @@ module.exports = [
             return userHasBeenAssessed;
         },
         date: 'reported',
-
+        aggregate: true
     },
     {
         id:'referrals_given_target',
@@ -48,7 +49,8 @@ module.exports = [
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
             return referralGiven === 'yes';
         },
-        date: 'reported'
+        date: 'reported',
+        aggregate: true
     },
     {
         id:'referrals_honored_target',
@@ -63,6 +65,7 @@ module.exports = [
             let visitedFacility = getField(report, 'danger_signs.visit_confirm');
             return visitedFacility === 'yes';
         },
-        date: 'reported'
+        date: 'reported',
+        aggregate: true
     },
 ];
