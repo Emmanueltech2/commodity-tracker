@@ -11,7 +11,6 @@ module.exports = [
     appliesToType: ['household_member_assessment'],
     appliesIf: function(contact, report){
         let userHasDangerSigns = getField(report, 'household_member_assessment.initial_symptoms') === 'yes';
-        console.log('userLoggedIn', contact);
         return userHasDangerSigns;
     },
     actions: [{form: 'cholera_follow_up', label:'Follow Up'}, {form: 'cholera_verification', label: 'Verify Case'}],
@@ -22,5 +21,6 @@ module.exports = [
             return new Date(report.reported_date + (event.start * 24 * 60 * 60 * 1000));
         }
     }],
+    priority: {level: 'high', label: 'High Priority'},
 },
 ];
