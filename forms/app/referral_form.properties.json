@@ -1,9 +1,9 @@
 {
     "title": [{
       "locale": "en",
-      "content": "specimen form"
+      "content": "Unmute Household"
     }],
-    "icon": "specimen form",
+    "icon": "unmute",
     "context": {
       "person": false,
       "place": true,

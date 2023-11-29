@@ -1,8 +1,14 @@
 {
-
-    "context": {
-      "place": false,
+  "title":  [
+      {
+          "locale":  "en",
+          "content":  "cholera_suspesion_follow_up"
+      }
+  ],
+  
+  "context": {
       "person": true,
-      "expression": "!contact.date_of_death && !summary.muted && ageInYears(contact) > 0"
-    }
+      "place": false,
+      "expression":  "!contact.date_of_death && !contact.muted && contact.contact_type  === 'household_member'"
   }
+}
