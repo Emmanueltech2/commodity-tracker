@@ -1,5 +1,6 @@
   {
     "icon-healthcare-assessment": "icon-followup-general.svg",
-    "icon-household": "icon-household-bednet.svg",
-    "icon-cough": "icon-condition-diarrhea.svg"
+    "icon-diarrhoea": "icon-condition-diarrhea.svg",
+    "icon-household":"icon-places-household.svg",
+    "icon-referral":"icon-places-clinic.svg"
   }

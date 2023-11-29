@@ -7,7 +7,7 @@ module.exports = [
         id: 'register_households_target',
         translation_key:'target.register_households',
         subtitle_translation_key: 'target.register_households.subtitle',
-        icon: 'icon-register-household',
+        icon: 'icon-household',
         type: 'count',
         goal: 50,
         appliesTo: 'contacts',
