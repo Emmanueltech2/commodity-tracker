@@ -333,7 +333,7 @@
     },
     {
       "id": "household_member",
-      "icon": "household-member",
+      "icon": "add-member",
       "name_key": "contact.type.household_member",
       "group_key": "contact.type.household_member.plural",
       "create_key": "contact.type.household_member.new",
