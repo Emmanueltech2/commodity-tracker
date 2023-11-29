@@ -42,10 +42,10 @@
             <value>&lt;p style="color:green;"&gt;Advice patient on the importance of maintaining hygiene to prevent Cholera&lt;/p&gt;</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute_watery_diarrhea:label">
-            <value>Acute watery Diarrhea</value>
+            <value>Acute watery diarrhea</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse_effortless_watery_diarrhoea:label">
-            <value>Profuse effortless watery diarrhoea</value>
+            <value>Profuse effortless watery diarrhea</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms:label">
             <value>Is the patient experiencing the following symptoms?</value>
@@ -60,7 +60,7 @@
             <value>Yes</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/initial_symptoms:label">
-            <value>Has <output value=" /household_member_assessment/patient_name "/> experienced symptoms such as diarrhoea or vomiting recently?</value>
+            <value>Has <output value=" /household_member_assessment/patient_name "/> experienced symptoms such as diarrhea or vomiting recently?</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/other_symptoms/dehydration:label">
             <value>Dehydration</value>
@@ -337,7 +337,7 @@
         </translation>
       </itext>
       <instance>
-        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-11-29 17:47:52">
+        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-11-30 00:01:01">
           <inputs>
             <meta>
               <location>
