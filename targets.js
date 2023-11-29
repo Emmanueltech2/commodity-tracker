@@ -60,10 +60,22 @@ module.exports = [
         type: 'percent',
         goal: 80,
         appliesTo: 'reports',
-        appliesToType: ['cholera_follow_up'],
-        passesIf: function(contact, report){
-            let visitedFacility = getField(report, 'danger_signs.visit_confirm');
-            return visitedFacility === 'yes';
+        appliesToType: ['household_member_assessment','cholera_follow_up'],
+        appliesIf: function(contact, report){
+            let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
+            getField(report, 'danger_signs.visit_confirm');
+            return referralGiven === 'yes';
+        },
+        passesIf: function(contact){
+            let allContactReports = contact.reports;
+            let followUpForm = 'cholera_follow_up';
+            for (const obj of allContactReports) {
+                if (obj.form === followUpForm) {
+                    let formFields = obj.fields;
+                    return formFields.danger_signs.visit_confirm === 'yes';
+                }
+            }
+            return false;
         },
         date: 'reported',
         aggregate: true
