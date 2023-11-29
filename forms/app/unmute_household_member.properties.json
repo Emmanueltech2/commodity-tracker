@@ -5,7 +5,7 @@
             "content":  "Unmute Household Member"
         }
     ],
-    "icon": "unmute",
+    "icon": "unmute-household",
     "context": {
         "person": true,
         "place": false,

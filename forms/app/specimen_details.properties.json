@@ -1,12 +1,12 @@
 {
     "title": [{
       "locale": "en",
-      "content": "specimen form"
+      "content": "Collected Specimen Details"
     }],
-    "icon": "specimen form",
+    "icon": "laboratory-specimen",
     "context": {
       "person": false,
       "place": true,
-      "expression": "contact.muted && contact.contact_type  === 'household'"
+      "expression": "!contact.date_of_death && !contact.muted && contact.contact_type  === 'household_member'"
     }
   }

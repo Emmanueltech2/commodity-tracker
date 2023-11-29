@@ -2,10 +2,10 @@
     "title":  [
         {
             "locale":  "en",
-            "content":  "cholera_verification"
+            "content":  "Cholera Verification"
         }
     ],
-    "icon": "icon-death-general",
+    "icon": "icon-diarrhoea",
     "context": {
         "person": true,
         "place": false,

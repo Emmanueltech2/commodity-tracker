@@ -10,5 +10,10 @@
     "icon-people-family":"icon-people-family.svg",
     "area-community-health-supervisor":"icon-people-manager-crop.svg",
     "household-member": "medic-person.svg",
-    "mute-household": "mute-household.svg"
+    "mute-household": "mute-household.svg",
+    "unmute-household": "unmute-household.svg",
+    "icon-report":"icon-report.svg",
+    "household-member-assessment": "household-member-assessment.svg",
+    "icon-death-general":"icon-death-coffin.svg",
+    "laboratory-specimen":"laboratory-specimen.svg"
   }

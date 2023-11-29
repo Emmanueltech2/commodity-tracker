@@ -5,7 +5,7 @@
             "content":  "Mute Household Member"
         }
     ],
-    "icon": "mute",
+    "icon": "mute-household",
     "context": {
         "person": true,
         "place": false,

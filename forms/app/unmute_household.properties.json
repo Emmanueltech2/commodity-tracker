@@ -3,7 +3,7 @@
       "locale": "en",
       "content": "Unmute Household"
     }],
-    "icon": "unmute",
+    "icon": "unmute-household",
     "context": {
       "person": false,
       "place": true,
