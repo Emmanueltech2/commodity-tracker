@@ -30,7 +30,7 @@ module.exports = [
         appliesToType: ['household_member', 'household'],
         appliesIf: function(contact){
             console.log('contactFollowUpApplies', contact);
-            return contact.contact.contact_type === 'household_member' || contact.contact.contact_type === 'household';
+            return contact.contact.contact_type === 'household_member';
         },
         passesIf: function(contact){
             console.log('contactFollowUpPasses', contact);
