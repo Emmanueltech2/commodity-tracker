@@ -24,14 +24,24 @@ module.exports = [
         translation_key:'target.follow_up_household_member',
         subtitle_translation_key: 'target.follow_up_household_member.subtitle',
         icon: 'icon-healthcare-assessment',
-        type: 'count',
+        type: 'percent',
         goal: 100,
-        appliesTo: 'reports',
-        appliesToType: ['household_member_assessment'],
-        appliesIf: function(contact, report){
-            let initialSymptomsChecked = getField(report, 'household_member_assessment.initial_symptoms');
-            let userHasBeenAssessed = initialSymptomsChecked === 'yes' || initialSymptomsChecked === 'no';
-            return userHasBeenAssessed;
+        appliesTo: 'contacts',
+        appliesToType: ['household_member', 'household'],
+        appliesIf: function(contact){
+            console.log('contactFollowUpApplies', contact);
+            return contact.contact.contact_type === 'household_member' || contact.contact.contact_type === 'household';
+        },
+        passesIf: function(contact){
+            console.log('contactFollowUpPasses', contact);
+            let allContactReports = contact.reports;
+            let assessmentForm = 'household_member_assessment';
+            for (const obj of allContactReports) {
+                if (obj.form === assessmentForm) {
+                    return true;
+                }
+            }
+            return false;
         },
         date: 'reported',
         aggregate: true
