@@ -765,7 +765,7 @@
       <bind nodeset="/data/area_supervisor_region/type" type="string"/>
       <bind nodeset="/data/area_supervisor_region/is_name_generated" type="select1" required="true()" relevant="not(selected( /data/init/create_new_person ,'none'))"/>
       <bind nodeset="/data/area_supervisor_region/manual_name" type="string" required="true()" relevant="selected( /data/init/create_new_person ,'none') or selected( /data/area_supervisor_region/is_name_generated ,'false')"/>
-      <bind nodeset="/data/area_supervisor_region/name" type="string" required="true()" calculate="if( ( selected( /data/area_supervisor_region/is_name_generated , 'true') or selected( /data/area_supervisor_region/is_name_generated , 'yes') ),  /data/init/generated_name_translation ,  /data/area_supervisor_region/manual_name )"/>
+      <bind nodeset="/data/area_supervisor_region/name" type="string" calculate="if( ( selected( /data/area_supervisor_region/is_name_generated , 'true') or selected( /data/area_supervisor_region/is_name_generated , 'yes') ),  /data/init/generated_name_translation ,  /data/area_supervisor_region/manual_name )" required="true()"/>
       <bind nodeset="/data/area_supervisor_region/notes" type="string"/>
       <bind nodeset="/data/area_supervisor_region/contact" type="string" calculate="if(selected( /data/init/create_new_person ,'none'), &quot;&quot;, coalesce( /data/init/select_person ,&quot;NEW&quot;))"/>
       <bind nodeset="/data/area_supervisor_region/geolocation" type="string" calculate="concat(../../inputs/meta/location/lat, concat(' ', ../../inputs/meta/location/long))"/>

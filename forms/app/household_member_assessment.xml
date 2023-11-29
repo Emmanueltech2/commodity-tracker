@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
-    <h:title>household Member Assessment</h:title>
+    <h:title>Household Member Assessment</h:title>
     <model>
       <itext>
         <translation lang="en">
@@ -337,7 +337,7 @@
         </translation>
       </itext>
       <instance>
-        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-11-22 17:53:08">
+        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-11-29 17:47:52">
           <inputs>
             <meta>
               <location>
@@ -437,10 +437,10 @@
       <bind nodeset="/household_member_assessment/referral_follow_up_date" type="string" calculate="date-time(decimal-date-time(today()) + 3)"/>
       <bind nodeset="/household_member_assessment/household_member_assessment/initial_symptoms" type="select1" required="true()"/>
       <bind nodeset="/household_member_assessment/household_member_assessment/advice_note" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'no')"/>
-      <bind nodeset="/household_member_assessment/household_member_assessment/crucial_symptoms" type="select1" required="true()" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')"/>
-      <bind nodeset="/household_member_assessment/household_member_assessment/duration" type="string" required="true()" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')"/>
-      <bind nodeset="/household_member_assessment/household_member_assessment/other_symptoms" type="select" required="true()" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')"/>
-      <bind nodeset="/household_member_assessment/household_member_assessment/patient_well_being" type="select1" required="true()" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/crucial_symptoms" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/duration" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/other_symptoms" type="select" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/patient_well_being" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
       <bind nodeset="/household_member_assessment/group_review" jr:constraintMsg="jr:itext('/household_member_assessment/group_review:jr:constraintMsg')"/>
       <bind nodeset="/household_member_assessment/group_review/summary_name" readonly="true()" type="string"/>
       <bind nodeset="/household_member_assessment/group_review/complete_action" readonly="true()" type="string"/>

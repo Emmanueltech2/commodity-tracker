@@ -1,6 +1,6 @@
 {
     "icon": "icon-outbreak",
-    "title": "moh_502 Form",
+    "title": "Specimen Details",
     "context": {
         "person": false,
         "place": false
