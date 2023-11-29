@@ -3,7 +3,7 @@
         "locale": "en",
         "content": "Mute Household"
     }],
-    "icon": "mute",
+    "icon": "mute-household",
     "context": {
         "person": false,
         "place": true,

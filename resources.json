@@ -9,5 +9,6 @@
     "community-health-volunteer":"icon-people-CHW-crop.svg",
     "icon-people-family":"icon-people-family.svg",
     "area-community-health-supervisor":"icon-people-manager-crop.svg",
-    "household-member": "medic-person.svg"
+    "household-member": "medic-person.svg",
+    "mute-household": "mute-household.svg"
   }
