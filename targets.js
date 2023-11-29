@@ -90,4 +90,19 @@ module.exports = [
         date: 'reported',
         aggregate: true
     },
+    {
+        id:'deaths_reported_target',
+        translation_key:'target.deaths_reported',
+        subtitle_translation_key: 'target.deaths_reported.subtitle',
+        icon: 'icon-death-general',
+        type: 'count',
+        goal: -1,
+        appliesTo: 'reports',
+        appliesToType: ['death_report'],
+        appliesIf: function(){
+            return true;
+        },
+        date: 'reported',
+        aggregate: true
+    },
 ];
