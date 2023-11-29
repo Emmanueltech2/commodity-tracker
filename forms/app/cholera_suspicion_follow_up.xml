@@ -220,7 +220,7 @@
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/reason" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/visit_confirm  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_sign_present" type="select1" required="true()"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/danger_signs_question_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
-      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/signs" type="select" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'" required="true()"/>
+      <bind nodeset="/cholera_suspicion_follow_up/danger_signs/signs" type="select" required="true()" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/congratulate_no_ds_note" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'no'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_1" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
       <bind nodeset="/cholera_suspicion_follow_up/danger_signs/refer_patient_note_2" readonly="true()" type="string" relevant=" /cholera_suspicion_follow_up/danger_signs/danger_sign_present  = 'yes'"/>
