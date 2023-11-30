@@ -35,9 +35,22 @@ function pushFieldsToSingleArray(fields, allFields) {
   return allFields;
 }
 
+function getMostRecentReport(reports, form) {
+  let result;
+  reports.forEach(function (report) {
+    if (form.includes(report.form) &&
+      !report.deleted &&
+      (!result || report.reported_date > result.reported_date)) {
+      result = report;
+    }
+  });
+  return result;
+}
+
 module.exports = {
   getField,
   capitalizeFirstLetter,
   titleCaseLetters,
   pushFieldsToSingleArray,
+  getMostRecentReport,
 };
