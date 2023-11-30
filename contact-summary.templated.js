@@ -1,6 +1,7 @@
 // contact, reports, lineage are globally available for contact-summary
 const thisContact = contact;
 const thisLineage = lineage;
+console.log('contact-summary', thisContact, thisLineage);
 const fields = [
   { appliesToType: 'person', label: 'patient_id', value: thisContact.patient_id, width: 4 },
   { appliesToType: 'person', label: 'contact.age', value: thisContact.date_of_birth, filter: 'age', width: 4 },

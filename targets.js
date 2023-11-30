@@ -27,13 +27,11 @@ module.exports = [
         type: 'percent',
         goal: 100,
         appliesTo: 'contacts',
-        appliesToType: ['household_member', 'household'],
+        appliesToType: ['household_member', 'household_contact'],
         appliesIf: function(contact){
-            console.log('contactFollowUpApplies', contact);
-            return contact.contact.contact_type === 'household_member';
+            return contact.contact.contact_type === 'household_member'|| contact.contact.contact_type === 'household_contact';
         },
         passesIf: function(contact){
-            console.log('contactFollowUpPasses', contact);
             let allContactReports = contact.reports;
             let assessmentForm = 'household_member_assessment';
             for (const obj of allContactReports) {
