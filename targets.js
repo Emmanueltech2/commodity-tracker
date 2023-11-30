@@ -49,13 +49,17 @@ module.exports = [
         translation_key:'target.referrals_given',
         subtitle_translation_key: 'target.referrals_given.subtitle',
         icon: 'icon-referral',
-        type: 'count',
-        goal: 20,
+        type: 'percent',
+        goal: -1,
         appliesTo: 'reports',
         appliesToType: ['household_member_assessment'],
-        appliesIf: function(contact, report){
+        passesIf: function(contact, report){
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
             return referralGiven === 'yes';
+        },
+        appliesIf: function(contact, report){
+            let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
+            return referralGiven === 'yes' || referralGiven === 'no';
         },
         date: 'reported',
         aggregate: true
