@@ -14,8 +14,14 @@
           <text id="/data/Wash/handwashing:label">
             <value>Does the household have hand washing facility?</value>
           </text>
+          <text id="/data/Wash/handwashings:label">
+            <value>&lt;p style = "color:red; font-weight:bold"&gt;Teach the household on the importance of hand washing facility in the household.&lt;/p&gt;</value>
+          </text>
           <text id="/data/Wash/latrine:label">
             <value>Does the household have a functional latrine that is in use?</value>
+          </text>
+          <text id="/data/Wash/latrines:label">
+            <value>&lt;p style = "color:red; font-weight:bold"&gt;Encourage the household to get a functional latrine.&lt;/p&gt;</value>
           </text>
           <text id="/data/Wash/manner_of_treatment:label">
             <value>How do you treat the water?</value>
@@ -41,8 +47,14 @@
           <text id="/data/contact:label">
             <value>Household Information</value>
           </text>
-          <text id="/data/household/n_hh_age:label">
-            <value>&lt;h4 style=&quot;text-align:center;&quot;&gt;<output value=" /data/repeat/child/person_age_years "/> <output value=" /data/repeat/child/dob_iso "/>&lt;/h4&gt;</value>
+          <text id="/data/household/findings:label">
+            <value>Household Data &lt;i class="fa fa-warning" aria-hidden="true"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/data/household/handfacility:label">
+            <value>Hand washing Facility is available</value>
+          </text>
+          <text id="/data/household/latriness:label">
+            <value>They have a functional latrine</value>
           </text>
           <text id="/data/household/n_hh_name:label">
             <value>&lt;h4 style=&quot;text-align:center;&quot;&gt;<output value=" /data/household/household_name "/>&lt;/h4&gt;</value>
@@ -53,8 +65,20 @@
           <text id="/data/household/n_submit:label">
             <value>&lt;h4 style="text-align:center;"&gt;Submit to complete this action.&lt;/h4&gt;</value>
           </text>
+          <text id="/data/household/nohandfacility:label">
+            <value>No hand washing facility</value>
+          </text>
+          <text id="/data/household/nolatrine:label">
+            <value>No functional latrine</value>
+          </text>
+          <text id="/data/household/nowatertreatment:label">
+            <value>They do not treat water</value>
+          </text>
           <text id="/data/household/summary_name:label">
             <value>Household Registration summary&lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/data/household/watertreatment:label">
+            <value>They treat water</value>
           </text>
           <text id="/data/input/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
@@ -157,7 +181,7 @@
             <value>Notes (optional)</value>
           </text>
           <text id="/data/repeat/child/phone:label">
-            <value>Phone Number</value>
+            <value>Primary Mobile Number</value>
           </text>
           <text id="/data/repeat/child/relationship_to_pc_other:label">
             <value>Specify other:</value>
@@ -165,8 +189,8 @@
           <text id="/data/repeat/child/relationship_to_primary_caregiver:label">
             <value>What is the relationship to the household head?</value>
           </text>
-          <text id="/data/repeat/child/secondary_phone:label">
-            <value>Secondary Phone Number</value>
+          <text id="/data/repeat/child/secs_phone:label">
+            <value>Secondary Mobile Number</value>
           </text>
           <text id="/data/repeat/child/sex:label">
             <value>Gender</value>
@@ -191,7 +215,13 @@
           <text id="/data/Wash/handwashing:label">
             <value>-</value>
           </text>
+          <text id="/data/Wash/handwashings:label">
+            <value>-</value>
+          </text>
           <text id="/data/Wash/latrine:label">
+            <value>-</value>
+          </text>
+          <text id="/data/Wash/latrines:label">
             <value>-</value>
           </text>
           <text id="/data/Wash/manner_of_treatment:label">
@@ -227,7 +257,13 @@
           <text id="/data/contact:label">
             <value>-</value>
           </text>
-          <text id="/data/household/n_hh_age:label">
+          <text id="/data/household/findings:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household/handfacility:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household/latriness:label">
             <value>-</value>
           </text>
           <text id="/data/household/n_hh_name:label">
@@ -239,10 +275,22 @@
           <text id="/data/household/n_submit:label">
             <value>-</value>
           </text>
+          <text id="/data/household/nohandfacility:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household/nolatrine:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household/nowatertreatment:label">
+            <value>-</value>
+          </text>
           <text id="/data/household/parent:label">
             <value>-</value>
           </text>
           <text id="/data/household/summary_name:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household/watertreatment:label">
             <value>-</value>
           </text>
           <text id="/data/household:label">
@@ -392,7 +440,7 @@
             <value>-</value>
           </text>
           <text id="/data/repeat/child/phone:label">
-            <value>Nambari ya simu</value>
+            <value>Nambari ya Msingi ya Simu ya Mkononi</value>
           </text>
           <text id="/data/repeat/child/relationship_to_pc_other:label">
             <value>Bainisha zingine:</value>
@@ -400,8 +448,8 @@
           <text id="/data/repeat/child/relationship_to_primary_caregiver:label">
             <value>Je, kuna uhusiano gani na mkuu wa kaya?</value>
           </text>
-          <text id="/data/repeat/child/secondary_phone:label">
-            <value>Nambari ya Simu ya Sekondari</value>
+          <text id="/data/repeat/child/secs_phone:label">
+            <value>Nambari ya Msingi ya Simu ya Mkononi</value>
           </text>
           <text id="/data/repeat/child/sex:label">
             <value>Jinsia</value>
@@ -472,7 +520,13 @@
             <summary_name/>
             <n_hh_name/>
             <n_hh_phone/>
-            <n_hh_age/>
+            <findings/>
+            <watertreatment/>
+            <nowatertreatment/>
+            <handfacility/>
+            <nohandfacility/>
+            <latriness/>
+            <nolatrine/>
             <n_submit/>
           </household>
           <Wash>
@@ -482,7 +536,9 @@
             <manner_of_treatment/>
             <encourage/>
             <handwashing/>
+            <handwashings/>
             <latrine/>
+            <latrines/>
           </Wash>
           <contact>
             <parent>PARENT</parent>
@@ -524,7 +580,7 @@
               <person_age_months/>
               <n_age/>
               <phone/>
-              <secondary_phone/>
+              <secs_phone/>
               <relationship_to_primary_caregiver/>
               <relationship_to_pc_other/>
             </child>
@@ -541,19 +597,19 @@
       <bind nodeset="/data/input/user/name" type="string"/>
       <bind nodeset="/data/inputs/contact/init/conduct_registration" type="select1" required="true()"/>
       <bind nodeset="/data/inputs/contact/init/ensure" readonly="true()" type="string" relevant=" /data/inputs/contact/init/conduct_registration  = 'person'"/>
-      <bind nodeset="/data/inputs/contact/check/registered" type="select1" constraint="selected( /data/inputs/contact/check/registered ,'no')" required="true()" jr:constraintMsg="Please exit the workflow. The household is already registered !"/>
-      <bind nodeset="/data/inputs/contact/check/household_area" type="select1" required="true()" relevant="selected( /data/inputs/contact/check/registered , 'no')" jr:constraintMsg="This field is required"/>
-      <bind nodeset="/data/inputs/contact/check/serving_household" type="select1" required="true()" relevant="selected( /data/inputs/contact/check/household_area , 'no')" jr:constraintMsg="This field is required"/>
-      <bind nodeset="/data/inputs/contact/check/specify" type="string" required="true()" relevant="selected( /data/inputs/contact/check/serving_household , 'other')" jr:constraintMsg="This field is required"/>
+      <bind nodeset="/data/inputs/contact/check/registered" type="select1" required="true()" jr:constraintMsg="Please exit the workflow. The household is already registered !" constraint="selected( /data/inputs/contact/check/registered ,'no')"/>
+      <bind nodeset="/data/inputs/contact/check/household_area" type="select1" required="true()" jr:constraintMsg="This field is required" relevant="selected( /data/inputs/contact/check/registered , 'no')"/>
+      <bind nodeset="/data/inputs/contact/check/serving_household" type="select1" required="true()" jr:constraintMsg="This field is required" relevant="selected( /data/inputs/contact/check/household_area , 'no')"/>
+      <bind nodeset="/data/inputs/contact/check/specify" type="string" required="true()" jr:constraintMsg="This field is required" relevant="selected( /data/inputs/contact/check/serving_household , 'other')"/>
       <bind nodeset="/data/inputs/contact/contact_name" type="string" required="true()"/>
       <bind nodeset="/data/inputs/contact/g_sex" type="select1" required="true()"/>
       <bind nodeset="/data/inputs/contact/dob_known" type="select1" required="true()"/>
-      <bind nodeset="/data/inputs/contact/dob_calendar" type="date" constraint="floor( difference-in-months( . , today() ) div 12 ) &gt;=10 and floor( difference-in-months( . , today() ) div 12 ) &lt;= 100" required="true()" relevant="../dob_known = 'yes'" jr:constraintMsg="Age must be between 10 and 100"/>
-      <bind nodeset="/data/inputs/contact/age" type="int" constraint=". &gt;= 10 and . &lt;= 100" required="true()" relevant="../dob_known = 'no'" jr:constraintMsg="Age must be between 10 and 100"/>
+      <bind nodeset="/data/inputs/contact/dob_calendar" type="date" required="true()" jr:constraintMsg="Age must be between 10 and 100" constraint="floor( difference-in-months( . , today() ) div 12 ) &gt;=10 and floor( difference-in-months( . , today() ) div 12 ) &lt;= 100" relevant="../dob_known = 'yes'"/>
+      <bind nodeset="/data/inputs/contact/age" type="int" required="true()" jr:constraintMsg="Age must be between 10 and 100" constraint=". &gt;= 10 and . &lt;= 100" relevant="../dob_known = 'no'"/>
       <bind nodeset="/data/inputs/contact/dob_raw" type="string" calculate="if(../dob_known = 'yes', ../dob_calendar, format-date-time( decimal-date-time( today() ) - (365.25 * ../age) , &quot;%Y-%m-%d&quot;) )"/>
       <bind nodeset="/data/inputs/contact/contact_dob_iso" type="string" calculate="format-date-time(decimal-date-time(../dob_raw),&quot;%Y-%m-%d&quot;)"/>
-      <bind nodeset="/data/inputs/contact/pri_phone" type="string" constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX."/>
-      <bind nodeset="/data/inputs/contact/sec_phone" type="string" constraint="regex(., '^(01\d{8}|07\d{8})$')" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX."/>
+      <bind nodeset="/data/inputs/contact/pri_phone" type="string" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
+      <bind nodeset="/data/inputs/contact/sec_phone" type="string" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
       <bind nodeset="/data/inputs/contact/phone1" type="string" calculate=" /data/inputs/contact/pri_phone "/>
       <bind nodeset="/data/inputs/contact/phone2" type="string" calculate=" /data/inputs/contact/sec_phone "/>
       <bind nodeset="/data/inputs/contact/phone_note" readonly="true()" type="string"/>
@@ -563,7 +619,9 @@
       <bind nodeset="/data/Wash/manner_of_treatment" type="select" relevant="selected( /data/Wash/treatment , 'yes')"/>
       <bind nodeset="/data/Wash/encourage" readonly="true()" type="string" relevant=" /data/Wash/manner_of_treatment  = True"/>
       <bind nodeset="/data/Wash/handwashing" type="select1"/>
+      <bind nodeset="/data/Wash/handwashings" readonly="true()" type="string" relevant=" /data/Wash/handwashing  = 'no'"/>
       <bind nodeset="/data/Wash/latrine" type="select1" required="true()"/>
+      <bind nodeset="/data/Wash/latrines" readonly="true()" type="string" relevant=" /data/Wash/latrine  = 'no'"/>
       <bind nodeset="/data/contact/parent" type="string"/>
       <bind nodeset="/data/contact/type" type="string"/>
       <bind nodeset="/data/contact/contact_type" type="string"/>
@@ -587,8 +645,8 @@
       <bind nodeset="/data/repeat/child/date_of_birth" type="string" calculate="../dob_iso"/>
       <bind nodeset="/data/repeat/child/age_set" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/dob_known" type="select1" required="true()" relevant="../age_set = 'over5'"/>
-      <bind nodeset="/data/repeat/child/dob_calendar" type="date" constraint="floor(decimal-date-time(.)) &lt;= floor(decimal-date-time(today())) and floor( difference-in-months( . , today() ) div 12 ) &lt;= 100" required="true()" relevant="../age_set = 'under5' or ../dob_known = 'yes'" jr:constraintMsg="Age must be between 0 and 100"/>
-      <bind nodeset="/data/repeat/child/age_years" type="int" constraint=". &gt;= 0 and . &lt;=100" required="true()" relevant="../age_set = 'over5' and ../dob_known = 'no'" jr:constraintMsg="Age must be between 0 and 100"/>
+      <bind nodeset="/data/repeat/child/dob_calendar" type="date" required="true()" jr:constraintMsg="Age must be between 0 and 100" constraint="floor(decimal-date-time(.)) &lt;= floor(decimal-date-time(today())) and floor( difference-in-months( . , today() ) div 12 ) &lt;= 100" relevant="../age_set = 'under5' or ../dob_known = 'yes'"/>
+      <bind nodeset="/data/repeat/child/age_years" type="int" required="true()" jr:constraintMsg="Age must be between 0 and 100" constraint=". &gt;= 0 and . &lt;=100" relevant="../age_set = 'over5' and ../dob_known = 'no'"/>
       <bind nodeset="/data/repeat/child/age_months" type="string" calculate="0"/>
       <bind nodeset="/data/repeat/child/ephemeral_months" type="string" calculate="if(format-date-time(today(),&quot;%m&quot;) - ../age_months &lt; 0, format-date-time(today(),&quot;%m&quot;) - ../age_months + 12, format-date-time(today(),&quot;%m&quot;) - ../age_months)"/>
       <bind nodeset="/data/repeat/child/ephemeral_years" type="string" calculate="if(format-date-time(today(),&quot;%m&quot;) - ../age_months &lt; 0, format-date-time(today(),&quot;%Y&quot;) - ../age_years - 1, format-date-time(today(),&quot;%Y&quot;) -../age_years)"/>
@@ -598,8 +656,8 @@
       <bind nodeset="/data/repeat/child/person_age_years" type="string" calculate="floor( difference-in-months( ../dob_iso, today() ) div 12 )"/>
       <bind nodeset="/data/repeat/child/person_age_months" type="string" calculate="floor(difference-in-months( ../dob_iso, today() ))"/>
       <bind nodeset="/data/repeat/child/n_age" readonly="true()" type="string" relevant="false()"/>
-      <bind nodeset="/data/repeat/child/phone" type="tel" constraint="1" relevant=" /data/repeat/child/person_age_years  &gt;=10" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX"/>
-      <bind nodeset="/data/repeat/child/secondary_phone" type="tel" constraint="1" relevant=" /data/repeat/child/person_age_years  &gt;=10" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX"/>
+      <bind nodeset="/data/repeat/child/phone" type="string" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
+      <bind nodeset="/data/repeat/child/secs_phone" type="string" jr:constraintMsg="Please make sure the number is not already in use by another person and is in the format 07XX XXX XXX or 01XX XXX XXX." constraint="regex(., '^(01\d{8}|07\d{8})$')"/>
       <bind nodeset="/data/repeat/child/relationship_to_primary_caregiver" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/relationship_to_pc_other" type="string" required="true()" relevant="../relationship_to_primary_caregiver = 'other'"/>
       <bind nodeset="/data/repeat/note" readonly="true()" type="string"/>
@@ -611,7 +669,13 @@
       <bind nodeset="/data/household/summary_name" readonly="true()" type="string"/>
       <bind nodeset="/data/household/n_hh_name" readonly="true()" type="string"/>
       <bind nodeset="/data/household/n_hh_phone" readonly="true()" type="string"/>
-      <bind nodeset="/data/household/n_hh_age" readonly="true()" type="string"/>
+      <bind nodeset="/data/household/findings" readonly="true()" type="string"/>
+      <bind nodeset="/data/household/watertreatment" readonly="true()" type="string" relevant=" /data/Wash/treatment  = 'yes'"/>
+      <bind nodeset="/data/household/nowatertreatment" readonly="true()" type="string" relevant=" /data/Wash/treatment  = 'no'"/>
+      <bind nodeset="/data/household/handfacility" readonly="true()" type="string" relevant=" /data/Wash/handwashing  = 'yes'"/>
+      <bind nodeset="/data/household/nohandfacility" readonly="true()" type="string" relevant=" /data/Wash/handwashing  = 'no'"/>
+      <bind nodeset="/data/household/latriness" readonly="true()" type="string" relevant=" /data/Wash/latrine  = 'yes'"/>
+      <bind nodeset="/data/household/nolatrine" readonly="true()" type="string" relevant=" /data/Wash/latrine  = 'no'"/>
       <bind nodeset="/data/household/n_submit" readonly="true()" type="string"/>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
@@ -808,6 +872,9 @@
           <value>no</value>
         </item>
       </select1>
+      <input ref="/data/Wash/handwashings">
+        <label ref="jr:itext('/data/Wash/handwashings:label')"/>
+      </input>
       <select1 ref="/data/Wash/latrine">
         <label ref="jr:itext('/data/Wash/latrine:label')"/>
         <item>
@@ -819,6 +886,9 @@
           <value>no</value>
         </item>
       </select1>
+      <input ref="/data/Wash/latrines">
+        <label ref="jr:itext('/data/Wash/latrines:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/data/contact">
       <label ref="jr:itext('/data/contact:label')"/>
@@ -915,11 +985,9 @@
           </input>
           <input ref="/data/repeat/child/phone">
             <label ref="jr:itext('/data/repeat/child/phone:label')"/>
-            <hint>Use the following format: 07XX XXX XXX</hint>
           </input>
-          <input ref="/data/repeat/child/secondary_phone">
-            <label ref="jr:itext('/data/repeat/child/secondary_phone:label')"/>
-            <hint>Use the following format: 07XX XXX XXX</hint>
+          <input ref="/data/repeat/child/secs_phone">
+            <label ref="jr:itext('/data/repeat/child/secs_phone:label')"/>
           </input>
           <select1 ref="/data/repeat/child/relationship_to_primary_caregiver">
             <label ref="jr:itext('/data/repeat/child/relationship_to_primary_caregiver:label')"/>
@@ -968,8 +1036,26 @@
       <input appearance="h5 center" ref="/data/household/n_hh_phone">
         <label ref="jr:itext('/data/household/n_hh_phone:label')"/>
       </input>
-      <input appearance="h5 center" ref="/data/household/n_hh_age">
-        <label ref="jr:itext('/data/household/n_hh_age:label')"/>
+      <input appearance="h1 blue" ref="/data/household/findings">
+        <label ref="jr:itext('/data/household/findings:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/watertreatment">
+        <label ref="jr:itext('/data/household/watertreatment:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/nowatertreatment">
+        <label ref="jr:itext('/data/household/nowatertreatment:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/handfacility">
+        <label ref="jr:itext('/data/household/handfacility:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/nohandfacility">
+        <label ref="jr:itext('/data/household/nohandfacility:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/latriness">
+        <label ref="jr:itext('/data/household/latriness:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/data/household/nolatrine">
+        <label ref="jr:itext('/data/household/nolatrine:label')"/>
       </input>
       <input ref="/data/household/n_submit">
         <label ref="jr:itext('/data/household/n_submit:label')"/>

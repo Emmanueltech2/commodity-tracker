@@ -285,7 +285,7 @@
         </translation>
       </itext>
       <instance>
-        <data id="contact:area_community_health_supervisor:edit" prefix="J1!contact:area_community_health_supervisor:edit!" delimiter="#" version="2023-11-29  22-34">
+        <data id="contact:area_community_health_supervisor:edit" prefix="J1!contact:area_community_health_supervisor:edit!" delimiter="#" version="2023-11-29  22-35">
           <inputs>
             <meta>
               <location>
@@ -334,7 +334,7 @@
       <bind nodeset="/data/area_community_health_supervisor/phone" type="tel" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678" constraint="true()"/>
       <bind nodeset="/data/area_community_health_supervisor/phone_alternate" type="tel" jr:constraintMsg="Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678" constraint="true()"/>
       <bind nodeset="/data/area_community_health_supervisor/role" type="select1"/>
-      <bind nodeset="/data/area_community_health_supervisor/role_other" type="string" required="true()" relevant="selected(  /data/area_community_health_supervisor/role ,'other')"/>
+      <bind nodeset="/data/area_community_health_supervisor/role_other" type="string" relevant="selected(  /data/area_community_health_supervisor/role ,'other')" required="true()"/>
       <bind nodeset="/data/area_community_health_supervisor/external_id" type="string"/>
       <bind nodeset="/data/area_community_health_supervisor/notes" type="string"/>
       <bind nodeset="/data/area_community_health_supervisor/meta/created_by" type="string" calculate="../../../inputs/user/name"/>
