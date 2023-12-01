@@ -14,20 +14,44 @@
           <text id="/household_member_assessment/group_review/all_patient_details:label">
             <value>Patient Details&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;</value>
           </text>
+          <text id="/household_member_assessment/group_review/client:label">
+            <value>The client has the following conditions:</value>
+          </text>
           <text id="/household_member_assessment/group_review/complete_action:label">
             <value>Be sure you submit to complete this action</value>
+          </text>
+          <text id="/household_member_assessment/group_review/dehydrate:label">
+            <value>Dehydration</value>
           </text>
           <text id="/household_member_assessment/group_review/facility_recommendation:label">
             <value>Recommendation &lt;i class="fa fa-warning" aria-hidden="true"&gt;&lt;/i&gt;</value>
           </text>
+          <text id="/household_member_assessment/group_review/kind:label">
+            <value>Has <output value=" /household_member_assessment/household_member_assessment/crucial_symptoms "/> of <output value=" /household_member_assessment/household_member_assessment/duration "/> motions</value>
+          </text>
+          <text id="/household_member_assessment/group_review/low:label">
+            <value>Low blood pressure</value>
+          </text>
+          <text id="/household_member_assessment/group_review/muscle:label">
+            <value>Muscle Cramps</value>
+          </text>
           <text id="/household_member_assessment/group_review/name_of_patient:label">
             <value><output value=" /household_member_assessment/patient_name "/></value>
           </text>
+          <text id="/household_member_assessment/group_review/rapid:label">
+            <value>Rapid heart rate</value>
+          </text>
           <text id="/household_member_assessment/group_review/recommend:label">
-            <value>Please recommend <output value=" /household_member_assessment/patient_name "/> to health facility immediately &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;</value>
+            <value>Refer <output value=" /household_member_assessment/patient_name "/> to health facility immediately &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/household_member_assessment/group_review/shoc:label">
+            <value>Vomits everything</value>
           </text>
           <text id="/household_member_assessment/group_review/summary_name:label">
             <value>Cholera Assessment summary&lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/household_member_assessment/group_review/the_findings:label">
+            <value>Findings &lt;i class="fa fa-search-plus" aria-hidden="true"&gt;&lt;/i&gt;</value>
           </text>
           <text id="/household_member_assessment/group_review/the_findings_followup:label">
             <value>Follow up Task &lt;i class="fa fa-search-plus" aria-hidden="true"&gt;&lt;/i&gt;</value>
@@ -39,16 +63,25 @@
             <value>-</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/advice_note:label">
-            <value>&lt;p style="color:green;"&gt;Advice patient on the importance of maintaining hygiene to prevent Cholera&lt;/p&gt;</value>
+            <value>&lt;p style="color:green;"&gt;Advise patient on the importance of maintaining hygiene to prevent Cholera&lt;/p&gt;</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/acute_watery_diarrhea:label">
-            <value>Acute watery diarrhea</value>
+            <value>Acute watery Diarrhea</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms/profuse_effortless_watery_diarrhoea:label">
-            <value>Profuse effortless watery diarrhea</value>
+            <value>Profuse effortless watery diarrhoea</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms:label">
-            <value>Is the patient experiencing the following symptoms?</value>
+            <value>What kind of diarrhea Is the patient experiencing?</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration/no:label">
+            <value>No</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration:label">
+            <value>Dehydration</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/duration:label">
             <value>How many motions in 24 hrs?</value>
@@ -62,23 +95,23 @@
           <text id="/household_member_assessment/household_member_assessment/initial_symptoms:label">
             <value>Has <output value=" /household_member_assessment/patient_name "/> experienced symptoms such as diarrhea or vomiting recently?</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/dehydration:label">
-            <value>Dehydration</value>
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure/no:label">
+            <value>No</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/low_blood_pressure:label">
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure:label">
             <value>Low blood pressure</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/muscle_cramps:label">
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps/no:label">
+            <value>No</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps:label">
             <value>Muscle Cramps</value>
-          </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/rapid_heart_rate:label">
-            <value>Rapid heart rate</value>
-          </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/shock:label">
-            <value>Shock</value>
-          </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms:label">
-            <value>Which other signs does <output value=" /household_member_assessment/patient_name "/> have?</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/patient_well_being/emergency:label">
             <value>Emergency</value>
@@ -91,6 +124,27 @@
           </text>
           <text id="/household_member_assessment/household_member_assessment/patient_well_being:label">
             <value>How would you describe the general well-being of the patient.</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate/no:label">
+            <value>No</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate:label">
+            <value>Rapid heart rate</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock/no:label">
+            <value>No</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock:label">
+            <value>Vomits everything</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/symptoms:label">
+            <value>Which other symptom does the patient have?</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment:label">
             <value>Household Member Assessment</value>
@@ -163,19 +217,43 @@
           <text id="/household_member_assessment/group_review/all_patient_details:label">
             <value>-</value>
           </text>
+          <text id="/household_member_assessment/group_review/client:label">
+            <value>-</value>
+          </text>
           <text id="/household_member_assessment/group_review/complete_action:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/group_review/dehydrate:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/group_review/facility_recommendation:label">
             <value>-</value>
           </text>
+          <text id="/household_member_assessment/group_review/kind:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/group_review/low:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/group_review/muscle:label">
+            <value>-</value>
+          </text>
           <text id="/household_member_assessment/group_review/name_of_patient:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/group_review/rapid:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/group_review/recommend:label">
             <value>-</value>
           </text>
+          <text id="/household_member_assessment/group_review/shoc:label">
+            <value>-</value>
+          </text>
           <text id="/household_member_assessment/group_review/summary_name:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/group_review/the_findings:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/group_review/the_findings_followup:label">
@@ -205,6 +283,15 @@
           <text id="/household_member_assessment/household_member_assessment/crucial_symptoms:label">
             <value>-</value>
           </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration/no:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/dehydration:label">
+            <value>-</value>
+          </text>
           <text id="/household_member_assessment/household_member_assessment/duration:label">
             <value>-</value>
           </text>
@@ -217,22 +304,22 @@
           <text id="/household_member_assessment/household_member_assessment/initial_symptoms:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/dehydration:label">
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure/no:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/low_blood_pressure:label">
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure/yes:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/muscle_cramps:label">
+          <text id="/household_member_assessment/household_member_assessment/low_blood_pressure:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/rapid_heart_rate:label">
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps/no:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms/shock:label">
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps/yes:label">
             <value>-</value>
           </text>
-          <text id="/household_member_assessment/household_member_assessment/other_symptoms:label">
+          <text id="/household_member_assessment/household_member_assessment/muscle_cramps:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/patient_well_being/emergency:label">
@@ -245,6 +332,27 @@
             <value>-</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment/patient_well_being:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate/no:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/rapid_heart_rate:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock/no:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/shock:label">
+            <value>-</value>
+          </text>
+          <text id="/household_member_assessment/household_member_assessment/symptoms:label">
             <value>-</value>
           </text>
           <text id="/household_member_assessment/household_member_assessment:label">
@@ -337,7 +445,7 @@
         </translation>
       </itext>
       <instance>
-        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-11-30 00:01:01">
+        <household_member_assessment id="household_member_assessment" prefix="J1!household_member_assessment!" delimiter="#" version="2023-12-01 07:45:58">
           <inputs>
             <meta>
               <location>
@@ -389,7 +497,12 @@
             <advice_note/>
             <crucial_symptoms/>
             <duration/>
-            <other_symptoms/>
+            <symptoms/>
+            <dehydration/>
+            <muscle_cramps/>
+            <rapid_heart_rate/>
+            <low_blood_pressure/>
+            <shock/>
             <patient_well_being/>
           </household_member_assessment>
           <group_review>
@@ -398,6 +511,14 @@
             <all_patient_details/>
             <name_of_patient/>
             <age_of_patient/>
+            <the_findings/>
+            <client/>
+            <kind/>
+            <dehydrate/>
+            <muscle/>
+            <rapid/>
+            <low/>
+            <shoc/>
             <advise/>
             <facility_recommendation/>
             <recommend/>
@@ -439,7 +560,12 @@
       <bind nodeset="/household_member_assessment/household_member_assessment/advice_note" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'no')"/>
       <bind nodeset="/household_member_assessment/household_member_assessment/crucial_symptoms" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
       <bind nodeset="/household_member_assessment/household_member_assessment/duration" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
-      <bind nodeset="/household_member_assessment/household_member_assessment/other_symptoms" type="select" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/symptoms" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/dehydration" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/muscle_cramps" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/rapid_heart_rate" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/low_blood_pressure" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
+      <bind nodeset="/household_member_assessment/household_member_assessment/shock" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
       <bind nodeset="/household_member_assessment/household_member_assessment/patient_well_being" type="select1" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'yes')" required="true()"/>
       <bind nodeset="/household_member_assessment/group_review" jr:constraintMsg="jr:itext('/household_member_assessment/group_review:jr:constraintMsg')"/>
       <bind nodeset="/household_member_assessment/group_review/summary_name" readonly="true()" type="string"/>
@@ -447,6 +573,14 @@
       <bind nodeset="/household_member_assessment/group_review/all_patient_details" readonly="true()" type="string"/>
       <bind nodeset="/household_member_assessment/group_review/name_of_patient" readonly="true()" type="string"/>
       <bind nodeset="/household_member_assessment/group_review/age_of_patient" readonly="true()" type="string"/>
+      <bind nodeset="/household_member_assessment/group_review/the_findings" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/patient_well_being , 'worsening') or selected( /household_member_assessment/household_member_assessment/patient_well_being , 'emergency')"/>
+      <bind nodeset="/household_member_assessment/group_review/client" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/patient_well_being , 'worsening') or selected( /household_member_assessment/household_member_assessment/patient_well_being , 'emergency')"/>
+      <bind nodeset="/household_member_assessment/group_review/kind" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/patient_well_being , 'worsening') or selected( /household_member_assessment/household_member_assessment/patient_well_being , 'emergency')"/>
+      <bind nodeset="/household_member_assessment/group_review/dehydrate" readonly="true()" type="string" relevant=" /household_member_assessment/household_member_assessment/dehydration  = 'yes'"/>
+      <bind nodeset="/household_member_assessment/group_review/muscle" readonly="true()" type="string" relevant=" /household_member_assessment/household_member_assessment/muscle_cramps  = 'yes'"/>
+      <bind nodeset="/household_member_assessment/group_review/rapid" readonly="true()" type="string" relevant=" /household_member_assessment/household_member_assessment/rapid_heart_rate  = 'yes'"/>
+      <bind nodeset="/household_member_assessment/group_review/low" readonly="true()" type="string" relevant=" /household_member_assessment/household_member_assessment/low_blood_pressure  = 'yes'"/>
+      <bind nodeset="/household_member_assessment/group_review/shoc" readonly="true()" type="string" relevant=" /household_member_assessment/household_member_assessment/shock  = 'yes'"/>
       <bind nodeset="/household_member_assessment/group_review/advise" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/initial_symptoms , 'no')"/>
       <bind nodeset="/household_member_assessment/group_review/facility_recommendation" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/patient_well_being , 'worsening') or selected( /household_member_assessment/household_member_assessment/patient_well_being , 'emergency')"/>
       <bind nodeset="/household_member_assessment/group_review/recommend" readonly="true()" type="string" relevant="selected( /household_member_assessment/household_member_assessment/patient_well_being , 'worsening') or selected( /household_member_assessment/household_member_assessment/patient_well_being , 'emergency')"/>
@@ -515,29 +649,64 @@
       <input ref="/household_member_assessment/household_member_assessment/duration">
         <label ref="jr:itext('/household_member_assessment/household_member_assessment/duration:label')"/>
       </input>
-      <select ref="/household_member_assessment/household_member_assessment/other_symptoms">
-        <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms:label')"/>
+      <input ref="/household_member_assessment/household_member_assessment/symptoms">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/symptoms:label')"/>
+      </input>
+      <select1 ref="/household_member_assessment/household_member_assessment/dehydration">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/dehydration:label')"/>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms/dehydration:label')"/>
-          <value>dehydration</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/dehydration/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms/muscle_cramps:label')"/>
-          <value>muscle_cramps</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/dehydration/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/household_member_assessment/household_member_assessment/muscle_cramps">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/muscle_cramps:label')"/>
+        <item>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/muscle_cramps/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms/rapid_heart_rate:label')"/>
-          <value>rapid_heart_rate</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/muscle_cramps/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/household_member_assessment/household_member_assessment/rapid_heart_rate">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/rapid_heart_rate:label')"/>
+        <item>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/rapid_heart_rate/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms/low_blood_pressure:label')"/>
-          <value>low_blood_pressure</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/rapid_heart_rate/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/household_member_assessment/household_member_assessment/low_blood_pressure">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/low_blood_pressure:label')"/>
+        <item>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/low_blood_pressure/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/household_member_assessment/household_member_assessment/other_symptoms/shock:label')"/>
-          <value>shock</value>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/low_blood_pressure/no:label')"/>
+          <value>no</value>
         </item>
-      </select>
+      </select1>
+      <select1 ref="/household_member_assessment/household_member_assessment/shock">
+        <label ref="jr:itext('/household_member_assessment/household_member_assessment/shock:label')"/>
+        <item>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/shock/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/household_member_assessment/household_member_assessment/shock/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
       <select1 ref="/household_member_assessment/household_member_assessment/patient_well_being">
         <label ref="jr:itext('/household_member_assessment/household_member_assessment/patient_well_being:label')"/>
         <item>
@@ -570,13 +739,37 @@
       <input appearance="h5 center" ref="/household_member_assessment/group_review/age_of_patient">
         <label ref="jr:itext('/household_member_assessment/group_review/age_of_patient:label')"/>
       </input>
+      <input appearance="h1 green" ref="/household_member_assessment/group_review/the_findings">
+        <label ref="jr:itext('/household_member_assessment/group_review/the_findings:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/client">
+        <label ref="jr:itext('/household_member_assessment/group_review/client:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/kind">
+        <label ref="jr:itext('/household_member_assessment/group_review/kind:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/dehydrate">
+        <label ref="jr:itext('/household_member_assessment/group_review/dehydrate:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/muscle">
+        <label ref="jr:itext('/household_member_assessment/group_review/muscle:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/rapid">
+        <label ref="jr:itext('/household_member_assessment/group_review/rapid:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/low">
+        <label ref="jr:itext('/household_member_assessment/group_review/low:label')"/>
+      </input>
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/shoc">
+        <label ref="jr:itext('/household_member_assessment/group_review/shoc:label')"/>
+      </input>
       <input appearance="h5 center" ref="/household_member_assessment/group_review/advise">
         <label ref="jr:itext('/household_member_assessment/group_review/advise:label')"/>
       </input>
       <input appearance="h1 red" ref="/household_member_assessment/group_review/facility_recommendation">
         <label ref="jr:itext('/household_member_assessment/group_review/facility_recommendation:label')"/>
       </input>
-      <input ref="/household_member_assessment/group_review/recommend">
+      <input appearance="h5 center" ref="/household_member_assessment/group_review/recommend">
         <label ref="jr:itext('/household_member_assessment/group_review/recommend:label')"/>
       </input>
       <input appearance="h1 green" ref="/household_member_assessment/group_review/the_findings_followup">
