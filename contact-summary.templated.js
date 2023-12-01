@@ -23,7 +23,7 @@ const houseHoldFields = [
 
 const householdMemberCards = [
   {
-    label: `${thisContact.name || thisContact.display_name} Condition Card`,
+    label: `Condition Card`,
     appliesToType: ['report'],
     appliesIf: (report) => {
         let correctContact = thisContact.contact_type === 'household_member' || thisContact.contact_type === 'household_contact';
