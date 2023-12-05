@@ -7,7 +7,7 @@
 ],
 "icon":"icon-report",
 "context": {
-    "person": true,
+    "person": false,
     "place": false,
     "expression": "!contact.date_of_death && !contact.muted && contact.contact_type  === 'household_member' || contact.contact_type === 'household_contact'"
 }
