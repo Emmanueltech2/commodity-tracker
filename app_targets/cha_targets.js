@@ -18,14 +18,15 @@ let chaTargets = [
         passesIf: function(contact){
             let allContactReports = contact.reports;
             let verifyCaseForm = 'cha_verify_case';
-            for (const obj of allContactReports) {
+            for (let i=0; i<allContactReports.length; i++) {
+                console.log(i, allContactReports[i]);
+                let obj = allContactReports[i];
                 if (obj.form === verifyCaseForm) {
                     let formFields = obj.fields;
                     return formFields.danger_signs.confirm_case === 'yes';
-                }else{
-                    return false;
                 }
             }
+            return false;
         },
         date: 'reported',
         context: "user.contact_type === 'area_community_health_supervisor'"
