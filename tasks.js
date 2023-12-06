@@ -50,7 +50,6 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['cha_verify_case'],
     appliesIf: function(contact, report){
-        console.log('reportDetails', report);
         let shouldVerify = report.fields.danger_signs.confirm_case === 'yes';
         return shouldVerify && user.contact_type === 'community_health_volunteer';
     },
