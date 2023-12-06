@@ -22,9 +22,10 @@ let chaTargets = [
                 if (obj.form === verifyCaseForm) {
                     let formFields = obj.fields;
                     return formFields.danger_signs.confirm_case === 'yes';
+                }else{
+                    return false;
                 }
             }
-            return false;
         },
         date: 'reported',
         context: "user.contact_type === 'area_community_health_supervisor'"
