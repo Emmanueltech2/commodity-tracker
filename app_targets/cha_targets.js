@@ -15,9 +15,16 @@ let chaTargets = [
             let caseReported = getField(report, 'household_member_assessment.initial_symptoms');
             return caseReported === 'yes';
         },
-        passesIf: function(report){
-            console.log('chaSideReps', report);
-            return true;
+        passesIf: function(contact){
+            let allContactReports = contact.reports;
+            let verifyCaseForm = 'cha_verify_case';
+            for (const obj of allContactReports) {
+                if (obj.form === verifyCaseForm) {
+                    let formFields = obj.fields;
+                    return formFields.danger_signs.confirm_case === 'yes';
+                }
+            }
+            return false;
         },
         date: 'reported',
         context: "user.contact_type === 'area_community_health_supervisor'"
