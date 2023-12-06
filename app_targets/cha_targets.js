@@ -69,7 +69,9 @@ let chaTargets = [
                 }
             }
             return false;
-        }
+        },
+        date: 'reported',
+        context: "user.contact_type === 'area_community_health_supervisor'"
     }
 ];
 module.exports = {chaTargets};
