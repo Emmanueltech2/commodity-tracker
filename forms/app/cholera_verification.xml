@@ -12,7 +12,7 @@
             <value>Yes</value>
           </text>
           <text id="/cholera_verification/danger_signs/confirm_case:label">
-            <value>Is <output value=" /cholera_verification/patient_name "/> Cholera case confirmed?</value>
+            <value>Is <output value=" /cholera_verification/patient_name "/> Cholera Case Confirmed?</value>
           </text>
           <text id="/cholera_verification/danger_signs/reason:label">
             <value>&lt;p style="color:red"&gt;Requested for Immediate Confirmation of Suspected Cholera Case.&lt;/p&gt;</value>
@@ -62,7 +62,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_verification id="cholera_verification" prefix="J1!cholera_verification!" delimiter="#" version="2023-12-01 07:57:38">
+        <cholera_verification id="cholera_verification" prefix="J1!cholera_verification!" delimiter="#" version="2023-12-06 15:39:56">
           <inputs>
             <meta>
               <location>

@@ -76,14 +76,14 @@ let chpTargets = [
         type: 'percent',
         goal: 80,
         appliesTo: 'reports',
-        appliesToType: ['household_member_assessment','cholera_follow_up'],
+        appliesToType: ['household_member_assessment','cholera_suspicion_follow_up'],
         appliesIf: function(contact, report){
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
             return referralGiven === 'yes';
         },
         passesIf: function(contact){
             let allContactReports = contact.reports;
-            let followUpForm = 'cholera_follow_up';
+            let followUpForm = 'cholera_suspicion_follow_up';
             for (const obj of allContactReports) {
                 if (obj.form === followUpForm) {
                     let formFields = obj.fields;
