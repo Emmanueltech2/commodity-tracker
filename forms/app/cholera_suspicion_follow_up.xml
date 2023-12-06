@@ -206,7 +206,7 @@
         </translation>
       </itext>
       <instance>
-        <cholera_suspicion_follow_up id="cholera_follow_up" prefix="J1!cholera_follow_up!" delimiter="#" version="2023-12-01 09:11:07">
+        <cholera_suspicion_follow_up id="cholera_suspicion_follow_up" prefix="J1!cholera_suspicion_follow_up!" delimiter="#" version="2023-12-06 10:12:34">
           <inputs>
             <meta>
               <location>
