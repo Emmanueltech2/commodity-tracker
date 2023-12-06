@@ -79,7 +79,6 @@ let chpTargets = [
         appliesToType: ['household_member_assessment','cholera_follow_up'],
         appliesIf: function(contact, report){
             let referralGiven = getField(report, 'household_member_assessment.initial_symptoms');
-            getField(report, 'danger_signs.visit_confirm');
             return referralGiven === 'yes';
         },
         passesIf: function(contact){
