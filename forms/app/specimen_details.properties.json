@@ -6,7 +6,7 @@
     "icon": "laboratory-specimen",
     "context": {
       "person": false,
-      "place": true,
-      "expression": "!contact.date_of_death && !contact.muted && contact.contact_type  === 'household_member'"
+      "place": false,
+      "expression": "!contact.date_of_death && !contact.muted && contact.contact_type  === 'dso'"
     }
   }
