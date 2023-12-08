@@ -4,7 +4,7 @@ let thisLineage = lineage;
 const diseaseSurveillanceFields = [
 {
     appliesToType: ['area_health_facility_nurse'],
-    label: 'Team Lead',
+    label: 'Name',
     value: thisContact.name,
     width: 4,
 },
