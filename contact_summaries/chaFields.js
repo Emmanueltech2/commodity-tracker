@@ -1,6 +1,5 @@
 let thisContact = contact;
 let thisLineage = lineage;
-
 const chaFields = [
 {
     appliesToType: ['area_community_health_supervisor'],

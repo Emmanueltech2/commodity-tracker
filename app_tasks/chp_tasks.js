@@ -6,7 +6,7 @@ const {
 let chpTasks = [
 {
     name: 'follow-up-household-member',
-    title: 'Follow up household member',
+    title: 'Follow Up Household Member',
     icon: 'icon-healthcare-assessment',
     appliesTo: 'reports',
     appliesToType: ['household_member_assessment'],

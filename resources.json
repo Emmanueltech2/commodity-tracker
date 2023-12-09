@@ -20,5 +20,6 @@
     "add-member":"icon-people-person-general.svg",
     "health-condition":"health-condition.svg",
     "cholera-verification":"cholera-verification.svg",
-    "cholera-report":"report-cholera.svg"
+    "cholera-report":"report-cholera.svg",
+    "lab-test": "lab-test.svg"
   }

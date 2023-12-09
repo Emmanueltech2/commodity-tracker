@@ -1,6 +1,7 @@
 const appTaskExtras = require('./app_tasks');
-const {chpTasks, chaTasks} = appTaskExtras;
+const {chpTasks, chaTasks, dsoTasks} = appTaskExtras;
 module.exports = [
     ...chpTasks,
-    ...chaTasks
+    ...chaTasks,
+    ...dsoTasks
 ];

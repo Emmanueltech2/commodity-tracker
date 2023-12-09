@@ -18,7 +18,8 @@
       "name": "usertype.data-entry"
     },
     "dso": {
-      "name": "Disease-surveillance-officer"
+      "name": "Disease Surveillance Officer",
+      "offline": true
     },
     "facility_Dsteam": {
       "name": "Facility disease surveillance team"
