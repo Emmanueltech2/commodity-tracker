@@ -43,6 +43,26 @@ let chpTasks = [
         }
     }],
     priority: {level: 'high', label: 'High Priority'},
+},
+{
+    name: 'chp-undo-death-report',
+    title: 'Undo Death Report',
+    icon: 'undo-death',
+    appliesTo: 'reports',
+    appliesToType: ['cha_verify_death'],
+    appliesIf: function(contact, report){
+        let confirmDeath = report.fields.death_report.confirm_death;
+        return confirmDeath === 'no' && user.contact_type === 'community_health_volunteer';
+    },
+    actions: [{form: 'undo_death_report', label: 'Undo Death Report'}],
+    events: [{
+        start: 3,
+        end: 3,
+        dueDate: function(event, contact, report){
+            return new Date(report.reported_date + (event.start * 24 * 60 * 60 * 1000));
+        }
+    }],
+    priority: {level: 'high', label: 'High Priority'},
 }
 ];
 module.exports = {chpTasks};
