@@ -21,5 +21,6 @@
     "health-condition":"health-condition.svg",
     "cholera-verification":"cholera-verification.svg",
     "cholera-report":"report-cholera.svg",
-    "lab-test": "lab-test.svg"
+    "lab-test": "lab-test.svg",
+    "undo-death": "undo-death.svg"
   }
