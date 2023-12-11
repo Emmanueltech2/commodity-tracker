@@ -105,7 +105,14 @@ let chpTargets = [
         goal: -1,
         appliesTo: 'reports',
         appliesToType: ['death_report'],
-        appliesIf: function(){
+        appliesIf: function(contact){
+            let allContactReports = contact.reports;
+            let undoDeathForm = 'undo_death_report';
+            for (const obj of allContactReports) {
+                if (obj.form === undoDeathForm) {
+                    return false;
+                }
+            }
             return true;
         },
         date: 'reported',
