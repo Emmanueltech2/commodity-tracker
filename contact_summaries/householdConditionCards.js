@@ -13,12 +13,12 @@ appliesIf: (report) => {
     thisContact.contact_type === 'household_contact';
     let correctForm =
     report.form === 'household_member_assessment' ||
-    report.form === 'cholera_verification';
+    report.form === 'specimen_form';
     let isAssessmentFormLatest =
     report ===
     getMostRecentReport(allReports, 'household_member_assessment');
     let isCholeraFormLatest =
-    report === getMostRecentReport(allReports, 'cholera_verification');
+    report === getMostRecentReport(allReports, 'specimen_form');
     return (
     correctContact &&
     correctForm &&
@@ -44,13 +44,13 @@ fields: [
     {
     label: 'Cholera Verification',
     icon: 'cholera-verification',
-    appliesIf: (report) => report.form === 'cholera_verification',
+    appliesIf: (report) => report.form === 'specimen_form',
     value: function (report) {
-        let choleraVerification = report.fields.danger_signs.confirm_case;
+        let testResults = report.fields.specimen_details_group.result;
         let status =
-        choleraVerification === 'yes'
+        testResults === 'positive'
             ? 'confirmed cholera case'
-            : 'not a cholera case';
+            : 'tested negative for cholera';
         return status;
     },
     width: 6,
