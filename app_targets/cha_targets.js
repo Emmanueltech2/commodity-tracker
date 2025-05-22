@@ -2,17 +2,19 @@ const extras = require('../nools-extras');
 const {getField} = extras;
 
 let chaTargets = [
+	{
+
     {
-        id: 'cholera-cases-reported',
+        id: 'commodity-verification-request',
         translation_key: 'target.cholera_cases_reported',
         subtitle_translation_key: 'target.cholera_cases_reported.subtitle',
         icon: 'cholera-report',
         type: 'count',
         goal: -1,
         appliesTo: 'reports',
-        appliesToType: ['household_member_assessment'],
+        appliesToType: [''],
         appliesIf: function(contact, report){
-            let caseReported = getField(report, 'household_member_assessment.initial_symptoms');
+            let caseReported = getField(report, 'commodity_mngt_tool');
             return caseReported === 'yes';
         },
         date: 'reported',
@@ -47,10 +49,10 @@ let chaTargets = [
         context: "user.contact_type === 'area_community_health_supervisor'"
     },
     {
-        id: 'cholera-cases-confirmed',
-        translation_key: 'target.cholera_cases_confirmed',
+        id: 'total-number-approved',
+        translation_key: 'target.commodieties_cases_unapproved',
         subtitle_translation_key: 'target.cholera_cases_confirmed.subtitle',
-        icon: 'icon-diarrhoea',
+        icon: '',
         type:'percent',
         goal: -1,
         appliesTo: 'reports',

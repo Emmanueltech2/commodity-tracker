@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Commodity Management</h:title>
+    <model>
+      <instance>
+        <commodity_mngt_tool id="commodity_mngt_tool" prefix="J1!commodity_mngt_tool!" delimiter="#" version="2016-06-20 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <contact>
+              <_id/>
+              <name/>
+              <supervisor/>
+              <community_unit/>
+              <contact>
+                <_id/>
+                <name/>
+              </contact>
+              <parent>
+                <_id/>
+              </parent>
+            </contact>
+          </inputs>
+          <patient_id/>
+          <chv_name/>
+          <chv_area_name/>
+          <chv_uuid/>
+          <supervisor_id/>
+          <branch_id/>
+          <chv_commuity_unit/>
+          <selected_zinc_sulphate_20mg/>
+          <zinc_sulphate_20mg_balance/>
+          <selected_acts_6s/>
+          <acts_6s_balance/>
+          <selected_acts_12s/>
+          <acts_12s_balance/>
+          <selected_acts_18s/>
+          <acts_18s_balance/>
+          <selected_acts_24s/>
+          <acts_24s_balance/>
+          <total_acts_balance/>
+          <selected_mrdt/>
+          <mrdt_balance/>
+          <selected_contraceptives/>
+          <contraceptives_balance/>
+          <commodity_mngt_tool>
+            <chw_details_note_1/>
+            <stock_issued/>
+            <zinc_sulphate_20mg>
+              <zinc_sulphate_ob>0</zinc_sulphate_ob>
+              <zinc_sulphate_new_stock>0</zinc_sulphate_new_stock>
+              <zinc_sulphate_expiry_date/>
+              <zinc_sulphate_transfer>0</zinc_sulphate_transfer>
+              <zinc_sulphate_expired_damaged>0</zinc_sulphate_expired_damaged>
+              <zinc_sulphate_current_b/>
+            </zinc_sulphate_20mg>
+            <acts_6s>
+              <acts_6s_ob>0</acts_6s_ob>
+              <acts_6s_new_stock>0</acts_6s_new_stock>
+              <acts_6s_expiry_date/>
+              <acts_6s_transfer>0</acts_6s_transfer>
+              <acts_6s_expired_damaged>0</acts_6s_expired_damaged>
+              <acts_6s_current_b/>
+            </acts_6s>
+            <acts_12s>
+              <acts_12s_ob>0</acts_12s_ob>
+              <acts_12s_new_stock>0</acts_12s_new_stock>
+              <acts_12s_expiry_date/>
+              <acts_12s_transfer>0</acts_12s_transfer>
+              <acts_12s_expired_damaged>0</acts_12s_expired_damaged>
+              <acts_12s_current_b/>
+            </acts_12s>
+            <acts_18s>
+              <acts_18s_ob>0</acts_18s_ob>
+              <acts_18s_new_stock>0</acts_18s_new_stock>
+              <acts_18s_expiry_date/>
+              <acts_18s_transfer>0</acts_18s_transfer>
+              <acts_18s_expired_damaged>0</acts_18s_expired_damaged>
+              <acts_18s_current_b/>
+            </acts_18s>
+            <acts_24s>
+              <acts_24s_ob>0</acts_24s_ob>
+              <acts_24s_new_stock>0</acts_24s_new_stock>
+              <acts_24s_expiry_date/>
+              <acts_24s_transfer>0</acts_24s_transfer>
+              <acts_24s_expired_damaged>0</acts_24s_expired_damaged>
+              <acts_24s_current_b/>
+            </acts_24s>
+            <total_acts_converted>
+              <total_acts_current_b/>
+            </total_acts_converted>
+            <mrdt>
+              <mrdt_ob>0</mrdt_ob>
+              <mrdt_new_stock>0</mrdt_new_stock>
+              <mrdt_expiry_date/>
+              <mrdt_transfer>0</mrdt_transfer>
+              <mrdt_expired_damaged>0</mrdt_expired_damaged>
+              <mrdt_current_b/>
+            </mrdt>
+            <combined_oral_contraceptives>
+              <contraceptives_ob>0</contraceptives_ob>
+              <contraceptives_new_stock>0</contraceptives_new_stock>
+              <contraceptives_expiry_date/>
+              <contraceptives_transfer>0</contraceptives_transfer>
+              <contraceptives_expired_damaged>0</contraceptives_expired_damaged>
+              <contraceptives_current_b/>
+            </combined_oral_contraceptives>
+            <sup_approval_note/>
+          </commodity_mngt_tool>
+          <group_summary>
+            <chw_details_note_2/>
+            <notify_note/>
+            <current_stock_summary/>
+            <zinc_20mg_title_n/>
+            <zinc_20mg_ed_n/>
+            <zinc_20mg_current_b_n/>
+            <total_converted_acts_title_n/>
+            <total_current_b_n/>
+            <mrdt_title_n/>
+            <mrdt_ed_n/>
+            <mrdt_current_b_n/>
+            <contraceptives_title_n/>
+            <contraceptives_ed_n/>
+            <contraceptives_current_b_n/>
+          </group_summary>
+          <additional_doc db-doc="TRUE">
+            <place_id/>
+            <type/>
+            <content_type/>
+            <created_by_doc db-doc-ref="./commodity_mngt_tool"/>
+            <form/>
+            <contact>
+              <_id/>
+            </contact>
+            <parent>
+              <_id/>
+            </parent>
+            <fields>
+              <chw_person_name/>
+              <chw_area_uuid/>
+              <chw_person_uuid/>
+              <chw_community_unit/>
+              <supervisor/>
+              <zinc_sulphate_20mg_selected/>
+              <acts_6s_selected/>
+              <acts_12s_selected/>
+              <acts_18s_selected/>
+              <acts_24s_selected/>
+              <mrdt_selected/>
+              <contraceptives_selected/>
+              <zinc_new_stock/>
+              <acts_6_new_stock/>
+              <acts_12_new_stock/>
+              <acts_18_new_stock/>
+              <acts_24_new_stock/>
+              <mrdt_stock_new_stock/>
+              <combined_contraceptives_new_stock/>
+              <zinc_ob/>
+              <acts_6_ob/>
+              <acts_12_ob/>
+              <acts_18_ob/>
+              <acts_24_ob/>
+              <mrdt_stock_ob/>
+              <combined_contraceptives_ob/>
+              <zinc_sulphate_stock_out/>
+              <acts_6s_stock_out/>
+              <acts_12s_stock_out/>
+              <acts_18s_stock_out/>
+              <acts_24s_stock_out/>
+              <mrdt_stock_out/>
+              <contraceptives_stock_out/>
+              <zinc_sulphate_exp_date/>
+              <acts_6s_exp_date/>
+              <acts_12s_exp_date/>
+              <acts_18s_exp_date/>
+              <acts_24s_exp_date/>
+              <mrdt_exp_date/>
+              <contraceptives_exp_date/>
+              <zinc_sulphate_damaged/>
+              <acts_6s_damaged/>
+              <acts_12s_damaged/>
+              <acts_18s_damaged/>
+              <acts_24s_damaged/>
+              <mrdt_damaged/>
+              <contraceptives_damaged/>
+              <zinc_sulphate_20mg_cb/>
+              <acts_6s_cb/>
+              <acts_12s_cb/>
+              <acts_18s_cb/>
+              <acts_24s_cb/>
+              <total_acts_cb/>
+              <mrdt_cb/>
+              <contraceptives_cb/>
+            </fields>
+          </additional_doc>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </commodity_mngt_tool>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/commodity_mngt_tool/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/source" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/source_id" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/_id" type="db:health_center"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/name" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/supervisor" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/community_unit" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/contact/_id" type="db:health_center"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/contact/name" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/inputs/contact/parent/_id" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/commodity_mngt_tool/chv_name" type="string" calculate="../inputs/contact/contact/name"/>
+      <bind nodeset="/commodity_mngt_tool/chv_area_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/commodity_mngt_tool/chv_uuid" type="string" calculate="../inputs/contact/contact/_id"/>
+      <bind nodeset="/commodity_mngt_tool/supervisor_id" type="string" calculate="../inputs/contact/supervisor"/>
+      <bind nodeset="/commodity_mngt_tool/branch_id" type="string" calculate="../inputs/contact/parent/_id"/>
+      <bind nodeset="/commodity_mngt_tool/chv_commuity_unit" type="string" calculate="../inputs/contact/community_unit"/>
+      <bind nodeset="/commodity_mngt_tool/selected_zinc_sulphate_20mg" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'zinc_sulphate_20mg'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/zinc_sulphate_20mg_balance" type="string" calculate="int((int( /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_new_stock  )) - (int( /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expired_damaged )))"/>
+      <bind nodeset="/commodity_mngt_tool/selected_acts_6s" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_6s'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/acts_6s_balance" type="string" calculate="int(int((int( /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_new_stock  )) - (int( /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expired_damaged ))))"/>
+      <bind nodeset="/commodity_mngt_tool/selected_acts_12s" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_12s'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/acts_12s_balance" type="string" calculate="int((int( /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_new_stock ) ) - (int( /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expired_damaged )))"/>
+      <bind nodeset="/commodity_mngt_tool/selected_acts_18s" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_18s'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/acts_18s_balance" type="string" calculate="int(int((int( /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_ob )+ int( /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_new_stock  )) - (int( /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_transfer )+ int( /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expired_damaged ))))"/>
+      <bind nodeset="/commodity_mngt_tool/selected_acts_24s" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_24s'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/acts_24s_balance" type="string" calculate="int((int( /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_new_stock ) ) - (int( /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expired_damaged )))"/>
+      <bind nodeset="/commodity_mngt_tool/total_acts_balance" type="string" calculate="int( /commodity_mngt_tool/acts_6s_balance ) + int( /commodity_mngt_tool/acts_12s_balance *2) + int( /commodity_mngt_tool/acts_18s_balance *3) + int( /commodity_mngt_tool/acts_24s_balance *4)"/>
+      <bind nodeset="/commodity_mngt_tool/selected_mrdt" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'mrdt'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/mrdt_balance" type="string" calculate="int((int( /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_new_stock ) ) - (int( /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expired_damaged )))"/>
+      <bind nodeset="/commodity_mngt_tool/selected_contraceptives" type="string" calculate="if(selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'combined_oral_contraceptives'), 'true','false')"/>
+      <bind nodeset="/commodity_mngt_tool/contraceptives_balance" type="string" calculate="int((int( /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_ob ) + int( /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_new_stock  )) - (int( /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_transfer ) + int( /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expired_damaged )))"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/chw_details_note_1" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/stock_issued" type="select" required="true()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'zinc_sulphate_20mg')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_6s')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_12s')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_18s')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_24s')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/total_acts_converted" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_6s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_12s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_18s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_24s')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/total_acts_converted/total_acts_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'mrdt')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'combined_oral_contraceptives')"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_ob" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_new_stock" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expiry_date" type="date" jr:constraintMsg="Date Should be in future" required="true()" constraint=".&gt;today()"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_transfer" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expired_damaged" type="int" jr:constraintMsg="Number not less than 0 but not more than 100" required="true()" constraint=".&gt;= 0 and .&lt;= 100"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_current_b" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/commodity_mngt_tool/sup_approval_note" readonly="true()" type="string" relevant="count-selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued )&gt;0"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/chw_details_note_2" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/notify_note" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/current_stock_summary" readonly="true()" type="string"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/zinc_20mg_title_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'zinc_sulphate_20mg')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/zinc_20mg_ed_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'zinc_sulphate_20mg')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/zinc_20mg_current_b_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'zinc_sulphate_20mg')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/total_converted_acts_title_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_6s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_12s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_18s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_24s')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/total_current_b_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_6s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_12s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_18s') or selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'acts_24s')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/mrdt_title_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'mrdt')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/mrdt_ed_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'mrdt')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/mrdt_current_b_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'mrdt')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/contraceptives_title_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'combined_oral_contraceptives')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/contraceptives_ed_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'combined_oral_contraceptives')"/>
+      <bind nodeset="/commodity_mngt_tool/group_summary/contraceptives_current_b_n" readonly="true()" type="string" relevant="selected( /commodity_mngt_tool/commodity_mngt_tool/stock_issued , 'combined_oral_contraceptives')"/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/place_id" type="string" calculate=" /commodity_mngt_tool/patient_id "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/type" type="string" calculate="&quot;data_record&quot;"/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/content_type" type="string" calculate="&quot;xml&quot;"/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/created_by_doc" type="string" calculate="."/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/form" type="string" calculate="&quot;commodities-approval-request&quot;"/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/contact/_id" type="string" calculate=" /commodity_mngt_tool/patient_id "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/parent/_id" type="string" calculate=" /commodity_mngt_tool/branch_id "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/chw_person_name" type="string" calculate=" /commodity_mngt_tool/chv_name "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/chw_area_uuid" type="string" calculate=" /commodity_mngt_tool/additional_doc/place_id "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/chw_person_uuid" type="string" calculate=" /commodity_mngt_tool/chv_uuid "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/chw_community_unit" type="string" calculate=" /commodity_mngt_tool/chv_commuity_unit "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/supervisor" type="string" calculate=" /commodity_mngt_tool/supervisor_id "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_sulphate_20mg_selected" type="string" calculate=" /commodity_mngt_tool/selected_zinc_sulphate_20mg "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6s_selected" type="string" calculate=" /commodity_mngt_tool/selected_acts_6s "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12s_selected" type="string" calculate=" /commodity_mngt_tool/selected_acts_12s "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18s_selected" type="string" calculate=" /commodity_mngt_tool/selected_acts_18s "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24s_selected" type="string" calculate=" /commodity_mngt_tool/selected_acts_24s "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_selected" type="string" calculate=" /commodity_mngt_tool/selected_mrdt "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/contraceptives_selected" type="string" calculate=" /commodity_mngt_tool/selected_contraceptives "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_stock_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/combined_contraceptives_new_stock" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_new_stock "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_stock_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/combined_contraceptives_ob" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_ob "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_sulphate_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6s_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12s_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18s_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24s_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/contraceptives_stock_out" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_transfer "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_sulphate_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6s_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12s_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18s_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24s_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/contraceptives_exp_date" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expiry_date "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_sulphate_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6s_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12s_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18s_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24s_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/contraceptives_damaged" type="string" calculate=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expired_damaged "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/zinc_sulphate_20mg_cb" type="string" calculate=" /commodity_mngt_tool/zinc_sulphate_20mg_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_6s_cb" type="string" calculate=" /commodity_mngt_tool/acts_6s_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_12s_cb" type="string" calculate=" /commodity_mngt_tool/acts_12s_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_18s_cb" type="string" calculate=" /commodity_mngt_tool/acts_18s_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/acts_24s_cb" type="string" calculate=" /commodity_mngt_tool/acts_24s_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/total_acts_cb" type="string" calculate=" /commodity_mngt_tool/total_acts_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/mrdt_cb" type="string" calculate=" /commodity_mngt_tool/mrdt_balance "/>
+      <bind nodeset="/commodity_mngt_tool/additional_doc/fields/contraceptives_cb" type="string" calculate=" /commodity_mngt_tool/contraceptives_balance "/>
+      <bind nodeset="/commodity_mngt_tool/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/commodity_mngt_tool/inputs">
+      <label>CHV Area</label>
+      <input appearance="hidden" ref="/commodity_mngt_tool/inputs/source">
+        <label>Source</label>
+      </input>
+      <input appearance="hidden" ref="/commodity_mngt_tool/inputs/source_id">
+        <label>Source ID</label>
+      </input>
+      <group ref="/commodity_mngt_tool/inputs/contact">
+        <input appearance="db-object bind-id-only" ref="/commodity_mngt_tool/inputs/contact/_id">
+          <label>What is the CHV's area?</label>
+        </input>
+        <input appearance="hidden" ref="/commodity_mngt_tool/inputs/contact/name">
+          <label>Name</label>
+        </input>
+        <input appearance="hidden" ref="/commodity_mngt_tool/inputs/contact/supervisor">
+          <label>Supervisor ID</label>
+        </input>
+        <input appearance="hidden" ref="/commodity_mngt_tool/inputs/contact/community_unit">
+          <label>Community Unit</label>
+        </input>
+        <group ref="/commodity_mngt_tool/inputs/contact/contact">
+          <input appearance="db-object bind-id-only" ref="/commodity_mngt_tool/inputs/contact/contact/_id">
+            <label>Contact ID</label>
+          </input>
+          <input appearance="hidden" ref="/commodity_mngt_tool/inputs/contact/contact/name">
+            <label>CHV Name</label>
+          </input>
+        </group>
+        <group ref="/commodity_mngt_tool/inputs/contact/parent">
+          <input ref="/commodity_mngt_tool/inputs/contact/parent/_id">
+            <label>Branch ID</label>
+          </input>
+        </group>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool">
+      <label>&lt;p&gt;Commodity Management Tool For;&lt;br&gt;&lt;br&gt; Malaria, Family Planning and Zinc Drugs&lt;/p&gt;</label>
+      <input appearance="h1 yellow" ref="/commodity_mngt_tool/commodity_mngt_tool/chw_details_note_1">
+        <label>&lt;b style=&quot;text-align:center;&quot;&gt;<output value=" /commodity_mngt_tool/chv_name "/> ---&gt; <output value=" /commodity_mngt_tool/chv_commuity_unit "/>&lt;/b&gt;</label>
+      </input>
+      <select appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/stock_issued">
+        <label>Choose the stock Issued</label>
+        <item>
+          <label>Zinc sulphate 20mg Tabs (10s)</label>
+          <value>zinc_sulphate_20mg</value>
+        </item>
+        <item>
+          <label>ACTs (6s)</label>
+          <value>acts_6s</value>
+        </item>
+        <item>
+          <label>ACTs (12s)</label>
+          <value>acts_12s</value>
+        </item>
+        <item>
+          <label>ACTs (18s)</label>
+          <value>acts_18s</value>
+        </item>
+        <item>
+          <label>ACTs (24s)</label>
+          <value>acts_24s</value>
+        </item>
+        <item>
+          <label>MRDT</label>
+          <value>mrdt</value>
+        </item>
+        <item>
+          <label>Combined Oral Contraceptives</label>
+          <value>combined_oral_contraceptives</value>
+        </item>
+      </select>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg">
+        <label>Zinc Sulphate 20mg Tabs (10s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_ob">
+          <label>Zinc Sulphate 20mg Tabs (10s),Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/zinc_sulphate_20mg_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s">
+        <label>ACTs (6s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_ob">
+          <label>ACTs (6s), Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_6s/acts_6s_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/acts_6s_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s">
+        <label>ACTs (12s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_ob">
+          <label>ACTs (12s),Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_12s/acts_12s_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/acts_12s_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s">
+        <label>ACTs (18s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_ob">
+          <label>ACTs (18s),Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_18s/acts_18s_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/acts_18s_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s">
+        <label>ACTs (24s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_ob">
+          <label>ACTs (24s),Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/acts_24s/acts_24s_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/acts_24s_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/total_acts_converted">
+        <label>Total ACTs Converted to (6s)</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/total_acts_converted/total_acts_current_b">
+          <label>Total ACT Current stock balance: <output value=" /commodity_mngt_tool/total_acts_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt">
+        <label>MRDT</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_ob">
+          <label>MRDT, Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/mrdt_balance "/></label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives">
+        <label>Combined Oral Contraceptives</label>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_ob">
+          <label>Combined Oral Contraceptive, Opening Balance</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_new_stock">
+          <label>Positive Adjustment (New stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expiry_date">
+          <label>Short Expiry Date</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_transfer">
+          <label>Stock given out (transfer)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expired_damaged">
+          <label>Negative Adjustment (Expired &amp;Damaged Stock)</label>
+        </input>
+        <input appearance="horizontal" ref="/commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_current_b">
+          <label>Current stock balance: <output value=" /commodity_mngt_tool/contraceptives_balance "/></label>
+        </input>
+      </group>
+      <input ref="/commodity_mngt_tool/commodity_mngt_tool/sup_approval_note">
+        <label>Message to CHV; A copy will be sent to your supervisor to confirm and approve.</label>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/commodity_mngt_tool/group_summary">
+      <label>Summary page</label>
+      <input appearance="h1 yellow" ref="/commodity_mngt_tool/group_summary/chw_details_note_2">
+        <label>&lt;b style=&quot;text-align:center;&quot;&gt;<output value=" /commodity_mngt_tool/chv_name "/> ---&gt; <output value=" /commodity_mngt_tool/chv_commuity_unit "/>&lt;/b&gt;</label>
+      </input>
+      <input appearance="h1 yellow" ref="/commodity_mngt_tool/group_summary/notify_note">
+        <label>Notify the supervisor</label>
+      </input>
+      <input appearance="h2 yellow" ref="/commodity_mngt_tool/group_summary/current_stock_summary">
+        <label>Current Stock Balance Summary</label>
+      </input>
+      <input appearance="h3 blue" ref="/commodity_mngt_tool/group_summary/zinc_20mg_title_n">
+        <label>Zinc (20mg) Tabs</label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/zinc_20mg_ed_n">
+        <label>Short Expiry Date: <output value=" /commodity_mngt_tool/commodity_mngt_tool/zinc_sulphate_20mg/zinc_sulphate_expiry_date "/></label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/zinc_20mg_current_b_n">
+        <label>Current stock balance: <output value=" /commodity_mngt_tool/zinc_sulphate_20mg_balance "/></label>
+      </input>
+      <input appearance="h3 blue" ref="/commodity_mngt_tool/group_summary/total_converted_acts_title_n">
+        <label>Total ACTs Converted to (6s)</label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/total_current_b_n">
+        <label>Current stock balance: <output value=" /commodity_mngt_tool/total_acts_balance "/></label>
+      </input>
+      <input appearance="h3 blue" ref="/commodity_mngt_tool/group_summary/mrdt_title_n">
+        <label>MRDT</label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/mrdt_ed_n">
+        <label>Short Expiry Date: <output value=" /commodity_mngt_tool/commodity_mngt_tool/mrdt/mrdt_expiry_date "/></label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/mrdt_current_b_n">
+        <label>Current stock balance: <output value=" /commodity_mngt_tool/mrdt_balance "/></label>
+      </input>
+      <input appearance="h3 blue" ref="/commodity_mngt_tool/group_summary/contraceptives_title_n">
+        <label>Combined Oral Contraceptive</label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/contraceptives_ed_n">
+        <label>Short Expiry Date: <output value=" /commodity_mngt_tool/commodity_mngt_tool/combined_oral_contraceptives/contraceptives_expiry_date "/></label>
+      </input>
+      <input appearance="li" ref="/commodity_mngt_tool/group_summary/contraceptives_current_b_n">
+        <label>Current stock balance: <output value=" /commodity_mngt_tool/contraceptives_balance "/></label>
+      </input>
+    </group>
+    <group ref="/commodity_mngt_tool/additional_doc">
+      <label>Additional doc that sends a copy to the Supervisor</label>
+      <group ref="/commodity_mngt_tool/additional_doc/contact">
+        <label></label>
+      </group>
+      <group ref="/commodity_mngt_tool/additional_doc/parent">
+        <label></label>
+      </group>
+      <group ref="/commodity_mngt_tool/additional_doc/fields"/>
+    </group>
+  </h:body>
+</h:html>

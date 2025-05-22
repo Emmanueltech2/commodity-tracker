@@ -193,7 +193,7 @@
       <bind nodeset="/specimen_details/patient_name" type="string" calculate="../inputs/contact/name"/>
       <bind nodeset="/specimen_details/cholera_specimen/availability" type="select1" required="true()"/>
       <bind nodeset="/specimen_details/cholera_specimen/note" readonly="true()" type="string" relevant="selected( /specimen_details/cholera_specimen/availability ,'no')"/>
-      <bind nodeset="/specimen_details/cholera_specimen/follow_up_date" type="date" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')" required="true()"/>
+      <bind nodeset="/specimen_details/cholera_specimen/follow_up_date" type="date" required="true()" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')"/>
       <bind nodeset="/specimen_details/specimen_details_group" relevant="selected( /specimen_details/cholera_specimen/availability ,'yes')"/>
       <bind nodeset="/specimen_details/specimen_details_group/specimen_type" type="select1" required="true()"/>
       <bind nodeset="/specimen_details/specimen_details_group/specimen_id" type="string" required="true()"/>
