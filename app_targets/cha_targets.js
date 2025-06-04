@@ -26,7 +26,7 @@ let chaTargets = [
         subtitle_translation_key: 'target.cholera_cases_verified.subtitle',
         icon: 'cholera-verification',
         type: 'percent',
-        goal: 100,
+        goal: 101,
         appliesTo: 'reports',
         appliesToType: ['household_member_assessment', 'cha_verify_case'],
         appliesIf: function(contact, report){
